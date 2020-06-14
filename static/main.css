@@ -1,0 +1,62 @@
+/* Global Variables */
+:root {
+    --primaryColor: red, 
+}
+
+section {
+    margin: 20px auto;
+}
+
+/* Navigation */
+.navbar {
+    transition:background-color 200ms linear;
+}
+
+/* Logo */
+.navbar-brand img {
+    width: 200px;
+    position:fixed;
+    top:-20px;
+    left:0px;
+}
+
+/* Navigation List */
+.navbar-nav {
+    margin: 15px 0;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./images/burgerHero.svg') no-repeat;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 350px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hero-caption {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 50%;
+    bottom: unset;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-caption h1 {
+    font-size: 80px;
+}
+
+
+
