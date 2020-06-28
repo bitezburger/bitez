@@ -1,5 +1,6 @@
 /*
 FONTS
+    font-family: 'Courier Prime', monospace;
     font-family: 'Raleway', sans-serif;
     font-family: 'Shadows Into Light', cursive;
 
@@ -22,6 +23,7 @@ html {
 
 * {
     -ms-overflow-style: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -35,8 +37,16 @@ html {
     --peachy: #FFEBC2;
 }
 
-section {
-    padding: 5%;
+.body-content {
+    width: 90%;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 2.8em;
+    text-align: center;
+    color: var(--raincloud);
 }
 
 /* Nav Bar
@@ -48,7 +58,7 @@ section {
 
 /* Logo */
 .navbar-brand img {
-    width: 200px;
+    width: 280px;
     position: absolute;
     top: -20px;
     left: 0px;
@@ -57,10 +67,12 @@ section {
 /* Navigation List */
 .navbar-nav {
     margin: 15px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
 }
 
 .nav-link {
-    color: white !important;
+    color: var(--whitemocha) !important;
 }
 
 /* Hero
@@ -85,18 +97,20 @@ section {
     top: 50%;
     bottom: unset;
     transform: translateY(-50%);
-    color: white;
+    color: var(--whitemocha);
     text-align: center;
 }
 
 .hero-caption h1 {
     font-size: 80px;
+    font-family: 'Courier Prime', monospace;
+    letter-spacing: 10px;
 }
 
 /* About
 ------------------------------------*/
 #about {
-    background: url('./images/about-background-2.jpg') repeat;
+    background: url('./images/about-background-img@2x.jpg') repeat;
     display: block;
     position: relative;
     width: 100%;
@@ -116,7 +130,11 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     border: white 2px solid;
-    padding: 9% 7%;
+    padding: 7% 6%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.5em;;
 }
 
 
@@ -150,9 +168,32 @@ section {
     text-align: center;
 }
 
+#menu h2, #menu h3, #menu h4, #menu p{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#menu img, #menu h3 {
+    display: inline;
+}
+
+#menu h2 {
+    color: var(--whitemocha);
+    margin-bottom: 25px;
+}
+
+#menu img {
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    width: 90%;
+    margin: auto;
+}
+
 /* Upcoming Locations 
 ------------------------------------*/
-#upcoming-locations {
+#find-us {
     background-color: var(--peachy);
 }
 

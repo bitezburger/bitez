@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Food truck delivery service for incredible burgers, and even better experiences.">
     <meta name="author" content="M&G Design, LLC.">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
     <title>Bitez | Welcome</title>
 
@@ -25,6 +25,8 @@
 </head>
 
 <body>
+
+<div id="app">
 <!-- ******************** HEADER / NAV ******************** -->
 <header id="hero">
     <a class="navbar-brand" href="index.html"><img src="./static/images/BitezLogo.svg"></a>
@@ -39,13 +41,13 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#About">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Menu">Menu</a>
+                    <a class="nav-link" href="#menu">Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#FindUs">Find Us</a>
+                    <a class="nav-link" href="#find-us">Find Us</a>
                 </li>
             </ul>
         </div>
@@ -67,16 +69,17 @@
 
 <!-- ************************ MENU ************************ -->
 <section id="blackboard">
-    <div>
+    <div id="menu" class="body-content">
         <h2>Menu</h2>
 
         <!--Hamburgers-->
         <div>
+            <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="35">
             <h3>Hamburgers</h3>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
             </p>
-            <div>
+            <div class="menu-item">
                 <div>
                     <h4>Burger #1</h4>
                     <p>$4.99</p>
@@ -85,7 +88,7 @@
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
                 </p>
             </div>
-            <div>
+            <div class="menu-item">
                 <div>
                     <h4>Burger #2</h4>
                     <p>$4.99</p>
@@ -98,11 +101,12 @@
 
         <!--French Fires-->
         <div>
+            <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="30">
             <h3>French Fries</h3>
             <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
             </p>
-            <div>
+            <div class="menu-item">
                 <div>
                     <h4>French Fries</h4>
                     <p>$4.99</p>
@@ -111,7 +115,7 @@
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
                 </p>
             </div>
-            <div>
+            <div class="menu-item">
                 <div>
                     <h4>Seasoned Fries</h4>
                     <p>$4.99</p>
@@ -125,22 +129,29 @@
 </section>
 
 <!-- ********************* LOCATIONS ********************** -->
-<section id="upcoming-locations">
-    <div>
+<section id="find-us">
+    <div class="body-content">
         <h2>Upcoming Locations</h2>
         <img>
         <div>
             <!-- ROW 1 -->
-            <div>
-                <div class="lax" data-lax-preset="leftToRight">
+            <div class="row">
+                <div class="lax col-6" data-lax-preset="">
                     <h3>ARCADIA, CA</h3>
-                    <p>
-                        When<br>
-                        Location<br>
-                        Hours
-                    </p>
+                    <div class="row">
+                        <p class="col-sm-12 col-4" style="text-align: right;">
+                            When<br>
+                            Location<br>
+                            Hours
+                        </p>
+                        <p class="col-sm-12 col-8 ">
+                            April 3, 2020<br>
+                            2323 Lake Ave.<br>
+                            3 - 5pm
+                        </p>
+                    </div>
                 </div>
-                <div  class="lax" data-lax-preset="leftToRight">
+                <div  class="lax col-6 col-sm-12" data-lax-preset="">
                     <h3>MONROVIA, CA</h3>
                     <p>
                         When<br>
@@ -152,7 +163,7 @@
 
             <!-- ROW 2 -->
             <div>
-                <div  class="lax" data-lax-preset="zoom>
+                <div  class="lax" data-lax-preset="">
                     <h3>PASADENA, CA</h3>
                     <p>
                         When<br>
@@ -160,7 +171,7 @@
                         Hours
                     </p>
                 </div>
-                <div class="lax" data-lax-preset="zoomIn">
+                <div class="lax" data-lax-preset="">
                     <h3>EL MONTE, CA</h3>
                     <p>
                         When<br>
@@ -177,7 +188,7 @@
 
 <!-- ********************** SIGN UP *********************** -->
 <section>
-    <div>
+    <div class="body-content">
         <div>
             <h2>Stay Informed</h2>
             <p>We'll notify you when Bitez is coming to your area.</p>
@@ -187,13 +198,16 @@
                 <img>
                 <form>
                 <div class="form-group">
+                    <label for="inputFirstName">First Name</label>
+                    <input v-model="message" type="text" class="form-control" id="inputFirstName">
+
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName">
+                </div>
+                <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -208,6 +222,7 @@
 
 <!-- *********************** FOOTER *********************** -->
 
+</div>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
@@ -222,6 +237,16 @@
 
 	window.requestAnimationFrame(updateLax)
 }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+    el: '#app',
+    data: {
+        message: ''
+    }
+    })
 </script>
 
 </body>
