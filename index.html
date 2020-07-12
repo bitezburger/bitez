@@ -29,28 +29,31 @@
 <div id="app">
 <!-- ******************** HEADER / NAV ******************** -->
 <header id="hero">
-    <a class="navbar-brand" href="index.html"><img src="./static/images/BitezLogo.svg"></a>
+    <a class="navbar-brand" href="index.html">
+        <img id="nav-logo" src="./static/images/BitezLogo.svg">
+    </a>
+
     <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
-        <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#find-us">Find Us</a>
-                </li>
-            </ul>
-        </div>
+        <div>
+            <div class="hamburger-menu d-block d-sm-none">
+                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon" width="35">
+            </div>
+            <div class="collapse navbar-collapse" id="">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#find-us">Find Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="hero-caption">
@@ -60,9 +63,9 @@
 
 <!-- ************************ ABOUT *********************** -->
 <section id="about">
-    <div class="aboutContent">
+    <div class="aboutContent col-10 col-md-8 col-lg-6">
         <p>
-            At Bitez, our mission is to Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            <span class="aboutContentLarge">A</span>t Bitez, our <span class="attract">mission</span> is to Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna <span class="attract">takimata</span> erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea <span class="attract">takimata</span> sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         </p>
     </div>
 </section>
@@ -73,56 +76,68 @@
         <h2>Menu</h2>
 
         <!--Hamburgers-->
-        <div>
-            <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="35">
-            <h3>Hamburgers</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
-            </p>
-            <div class="menu-item">
-                <div>
-                    <h4>Burger #1</h4>
-                    <p>$4.99</p>
-                </div>
+        <div class="hamburgers">
+            <div class="food-description">
+                <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="35">
+                <h3>Hamburgers</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
                 </p>
             </div>
-            <div class="menu-item">
-                <div>
-                    <h4>Burger #2</h4>
-                    <p>$4.99</p>
+            <div class="menu-items">
+                <div class="container">
+                    <div class="row menu-row">
+                        <h4 class="col-8 col-md-11">Burger #1</h4>
+                        <p class="col-4 col-md-1">$4.99</p>
+                    </div>
+                    <hr class="dotted">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
-                </p>
+                <div class="container">
+                    <div class="row menu-row">
+                        <h4 class="col-8 col-md-11">Burger #2</h4>
+                        <p class="col-4 col-md-1">$4.99</p>
+                    </div>
+                    <hr class="dotted">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
+                    </p>
+                </div>
             </div>
         </div>
 
         <!--French Fires-->
-        <div>
-            <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="30">
-            <h3>French Fries</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
-            </p>
-            <div class="menu-item">
-                <div>
-                    <h4>French Fries</h4>
-                    <p>$4.99</p>
-                </div>
+        <div class="french-fries">
+            <div class="food-description">
+                <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="30">
+                <h3>French Fries</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
                 </p>
             </div>
-            <div class="menu-item">
-                <div>
-                    <h4>Seasoned Fries</h4>
-                    <p>$4.99</p>
+            <div class="menu-items">
+                <div class="container">
+                    <div class="row menu-row">
+                        <h4 class="col-8 col-md-11">French Fries</h4>
+                        <p class="col-4 col-md-1">$4.99</p>
+                    </div>
+                    <hr class="dotted">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
+                    </p>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
-                </p>
+                <div class="container">
+                    <div class="row menu-row">
+                        <h4 class="col-8 col-md-11">Seasoned French Fries</h4>
+                        <p class="col-4 col-md-1">$4.99</p>
+                    </div>
+                    <hr class="dotted">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -132,74 +147,57 @@
 <section id="find-us">
     <div class="body-content">
         <h2>Upcoming Locations</h2>
-        <img>
-        <div>
+        <div class="vroom">
+            <img src="./static/images/dust-icon.png">
+            <img src="./static/images/food-truck-icon.png">
+        </div>
+        <div class="container">
             <!-- ROW 1 -->
             <div class="row">
-                <div class="lax col-6" data-lax-preset="">
-                    <h3>ARCADIA, CA</h3>
-                    <div class="row">
-                        <p class="col-sm-12 col-4" style="text-align: right;">
-                            When<br>
-                            Location<br>
-                            Hours
-                        </p>
-                        <p class="col-sm-12 col-8 ">
-                            April 3, 2020<br>
-                            2323 Lake Ave.<br>
-                            3 - 5pm
-                        </p>
+                <div v-for="location in locations" class="location col-10 col-md-6">
+                    <h3>{{ location.city }}</h3>
+                    <div class="container">
+                        <div class="row">
+                            <p class="col-6" style="text-align: right;">
+                                <b>When</b><br>
+                                <b>Location</b><br>
+                                <b>Hours</b>
+                            </p>
+                            <p class="col-6">
+                                {{ location.when }}<br>
+                                {{ location.location }}<br>
+                                {{ location.hours }}
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div  class="lax col-6 col-sm-12" data-lax-preset="">
-                    <h3>MONROVIA, CA</h3>
-                    <p>
-                        When<br>
-                        Location<br>
-                        Hours
-                    </p>
-                </div>
-            </div>
-
-            <!-- ROW 2 -->
-            <div>
-                <div  class="lax" data-lax-preset="">
-                    <h3>PASADENA, CA</h3>
-                    <p>
-                        When<br>
-                        Location<br>
-                        Hours
-                    </p>
-                </div>
-                <div class="lax" data-lax-preset="">
-                    <h3>EL MONTE, CA</h3>
-                    <p>
-                        When<br>
-                        Location<br>
-                        Hours
-                    </p>
                 </div>
             </div>
         </div>
-        <p>Don't see a city near you?</p>
-        <a href="#stay-informed">LEARN MORE</a>
+        <div class="button stay-informed-cta">
+            <p>Don't see a city near you?</p>
+            <a href="#stay-informed">LEARN MORE</a>
+        </div>
     </div>
 </section>
 
 <!-- ********************** SIGN UP *********************** -->
-<section>
-    <div class="body-content">
+<section id="sign-up">
+    <div class="body-content container">
         <div>
             <h2>Stay Informed</h2>
             <p>We'll notify you when Bitez is coming to your area.</p>
         </div>
-        <div>
-            <div>
+        <div class="row">
+            <div class="col-10 col-md-6">
+
+            </div>
+
+            <div class="col-10 col-md-6">
                 <img>
                 <form>
                 <div class="form-group">
                     <label for="inputFirstName">First Name</label>
-                    <input v-model="message" type="text" class="form-control" id="inputFirstName">
+                    <input type="text" class="form-control" id="inputFirstName">
 
                     <label for="inputLastName">Last Name</label>
                     <input type="text" class="form-control" id="inputLastName">
@@ -207,11 +205,10 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive emails with additional information and relevant offers from Bitez.</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -244,9 +241,30 @@
     var app = new Vue({
     el: '#app',
     data: {
-        message: ''
+        locations: [
+            {'city': 'ARCADIA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'MONRVIA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
+        ]
     }
     })
+</script>
+<script>
+    var myNav = document.getElementById('nav');
+    var logo = document.getElementById('nav-logo');
+    var heightOfNav = 85;
+    window.onscroll = function () { 
+        "use strict";
+        if (document.body.scrollTop >= heightOfNav || document.documentElement.scrollTop >= heightOfNav ) {
+            myNav.classList.add("bg-dark");
+            logo.classList.add('navbar-img-bg-scrolled');
+        } 
+        else {
+            myNav.classList.remove("bg-dark");
+            logo.classList.remove('navbar-img-bg-scrolled');
+        }
+    };
 </script>
 
 </body>

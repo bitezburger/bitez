@@ -42,11 +42,40 @@ html {
     margin: auto;
 }
 
+.body-content h2 {
+    padding-top: 25px;
+}
+
 h2 {
     font-family: 'Courier Prime', monospace;
     font-size: 2.8em;
     text-align: center;
     color: var(--raincloud);
+}
+
+.dotted {
+    border-top: 2px dotted #bbb;
+    margin: 0 0 5px 0;
+}
+
+.container {
+    padding: 0;
+}
+
+.button a {
+    text-decoration: none;
+    background-color: var(--reddish);
+    color: var(--whitemocha);
+    padding: 15px 25px 15px 25px;
+    display: inline-block;
+    border-radius: 9px;
+    transition: all .6s ease;
+}
+
+.button a:hover {
+    background-color: #F36874;
+    transition: all .6s ease;
+    padding: 15px 33px 15px 33px;
 }
 
 /* Nav Bar
@@ -56,12 +85,36 @@ h2 {
     transition:background-color 200ms linear;
 }
 
+.hamburger-menu {
+    width:100%;
+    text-align: right;
+}
+
+.hamburger-menu img {
+    cursor: pointer;
+}
+
 /* Logo */
+.navbar div:first-of-type {
+    width: 90%;
+    margin: auto;
+}
+
 .navbar-brand img {
     width: 280px;
     position: absolute;
     top: -20px;
+    left: 0;
+    transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.navbar-img-bg-scrolled {
+    width: 125px !important;
+    position: fixed !important;
+    top: -15px !important;
+    z-index: 1031 !important;
     left: 0px;
+    transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 /* Navigation List */
@@ -88,6 +141,7 @@ h2 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero-caption {
@@ -137,6 +191,14 @@ h2 {
     line-height: 1.5em;;
 }
 
+.aboutContentLarge {
+    /* font-size:5rem; */
+}
+
+.attract {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
 
 /* Menu 
 ------------------------------------*/
@@ -168,8 +230,45 @@ h2 {
     text-align: center;
 }
 
+.hamburgers {
+    margin-bottom: 50px;
+}
+
+.food-description {
+    width: 95%;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.food-description h3 {
+    font-size: 1.8em;
+}
+
+.food-description p {
+    font-size: 1.1em;
+}
+
+.menu-items {
+    width: 88%;
+    margin-left: 5%;
+    font-size: 16px;
+}
+
+.menu-items h4 {
+    font-size: 1.5em;
+}
+
+.menu-items p {
+    font-size: 1.2em;
+}
+
+.menu-items .container:first-of-type {
+    margin-bottom: 30px;
+}
+
 #menu h2, #menu h3, #menu h4, #menu p{
     font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 2px;
 }
 
 #menu img, #menu h3 {
@@ -186,9 +285,8 @@ h2 {
     padding-bottom: 10px;
 }
 
-.menu-item {
-    width: 90%;
-    margin: auto;
+.menu-row p {
+    text-align: right;
 }
 
 /* Upcoming Locations 
@@ -197,4 +295,57 @@ h2 {
     background-color: var(--peachy);
 }
 
+#find-us h2 {
+    margin-bottom: -20px;
+    padding-top: 60px;
+}
 
+#find-us h3 {
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+}
+
+.vroom {
+    text-align: center;
+    margin-top: 45px;
+}
+
+.location {
+    margin: 50px auto auto auto;
+}
+
+.stay-informed-cta {
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+
+/* Sign Up
+------------------------------------*/
+
+#sign-up p {
+    text-align: center;
+}
+
+/* Media Queries 
+------------------------------------*/
+@media screen and (max-width: 500px) {
+    .aboutContent {
+        background: var(--reddish);
+    }
+    .navbar-img-bg {
+        width: 80px !important;
+    }
+    .navbar div:first-of-type {
+        width: 95%;
+    }
+    .navbar-img-bg {
+        top: -5px;
+        left: 8px;
+    }
+    .hamburger-menu img {
+        padding: 10px 0;
+    }
+    .location {
+        margin: 25px auto auto auto;
+    }
+  }
