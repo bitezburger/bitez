@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Hide Side Menu until Vue is rendered */
+[v-cloak] {
+    display: none;
+}
+
 *, *:before, *:after {
     box-sizing: inherit; /*doesn't let padding or margin change size*/
 }
@@ -81,6 +86,10 @@ h2 {
 /* Nav Bar
 ------------------------------------*/
 /* Navigation */
+.fixed-top {
+    z-index: 10;
+}
+
 .navbar {
     transition:background-color 200ms linear;
 }
@@ -112,7 +121,7 @@ h2 {
     width: 125px !important;
     position: fixed !important;
     top: -15px !important;
-    z-index: 1031 !important;
+    z-index: 11 !important;
     left: 0px;
     transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
@@ -126,6 +135,39 @@ h2 {
 
 .nav-link {
     color: var(--whitemocha) !important;
+}
+
+/* Mobile Navigation List */
+.mobile-nav {
+    background-color: var(--raincloud);
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#exit-button{
+    float: right;
+    margin: 20px 20px 0 0;
+}
+
+.mobile-nav a{
+    display: block;
+    text-align: center;
+    margin: 15px 0 15px 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: var(--whitemocha);
+}
+
+.mobile-nav a:first-of-type {
+    margin-top: 35%;
+}
+
+.mobile-nav a:last-of-type {
+    margin-top: 50px;
 }
 
 /* Hero
@@ -322,8 +364,58 @@ h2 {
 /* Sign Up
 ------------------------------------*/
 
+#sign-up {
+    padding-bottom: 25px;
+}
+
 #sign-up p {
     text-align: center;
+}
+
+
+/* Footer
+------------------------------------*/
+
+#footer {
+    background-color: var(--raincloud);
+    color: var(--whitemocha);
+}
+
+.footer-icon {
+    text-align: center;
+}
+
+.footer-icon img {
+    width: 250px;
+}
+
+.footer-info {
+    margin: auto;
+    text-align: center;
+}
+
+.footer-info img, .footer-info p {
+    display: inline;
+}
+
+.footer-phone {
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+
+.footer-phone div {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.copyright-info {
+    margin: 30px 0 0 0;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 /* Media Queries 
@@ -332,15 +424,19 @@ h2 {
     .aboutContent {
         background: var(--reddish);
     }
-    .navbar-img-bg {
-        width: 80px !important;
+    .navbar-brand img {
+        width: 235px;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-img-bg-scrolled {
+        width: 100px !important;
+        left: 0px !important;
+        transform: unset !important;
     }
     .navbar div:first-of-type {
         width: 95%;
-    }
-    .navbar-img-bg {
-        top: -5px;
-        left: 8px;
     }
     .hamburger-menu img {
         padding: 10px 0;

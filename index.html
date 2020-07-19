@@ -35,7 +35,8 @@
 
     <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
         <div>
-            <div class="hamburger-menu d-block d-sm-none">
+            <!-- Mobile Hamburger Icon -->
+            <div @click="sideMenu = true" class="hamburger-menu d-block d-sm-none">
                 <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon" width="35">
             </div>
             <div class="collapse navbar-collapse" id="">
@@ -56,6 +57,14 @@
             </div>
         </div>
     </nav>
+    <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
+        <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
+        <a href="#home" @click="hamburger=false">Home</a>
+        <a href="#about" @click="hamburger=false">About</a>
+        <a href="#menu" @click="hamburger=false">Menu</a>
+        <a href="#find-us" @click="hamburger=false">Find Us</a>    
+        <a href="https://www.linkedin.com/in/kristenescobar97/" target="_blank"><img src="https://img.icons8.com/plasticine/60/000000/linkedin.png" alt="Linkedin icon"></a>
+    </div>
     <div class="hero-caption">
         <h1>Grab a Bitez</h1>
     </div>
@@ -219,6 +228,38 @@
 
 <!-- *********************** FOOTER *********************** -->
 
+<footer id="footer">
+    <div class="footer-icon">
+        <img src="./static/images/BitezLogo.svg">
+    </div>
+    <div class="container">
+        <div class="row footer-info">
+            <div class="col-12 col-md-6">
+                <h3>CONTACT US</h3>
+                <div class="footer-phone">
+                    <div>
+                        <img src="./static/images/phone-icon.png" alt="a phone icon" width="20px;">
+                    </div>
+                    <p>348 &dash; 293 &dash; 3928</p>
+                </div>
+                <div class="footer-phone">
+                    <div>
+                        <img src="./static/images/email-icon.png" alt="an envelope icon" width="20px;">
+                    </div>
+                    <p>info@bitezburger.com</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>FOLLOW US</h3>
+                <img>
+                <img>
+                <img>
+            </div>
+        </div>
+    </div>
+    <p class="copyright-info">Copyright &copy;2020 Bitez. All rights reserved.</p>
+</footer>
+
 </div>
 
 <!-- Scripts -->
@@ -236,6 +277,7 @@
 }
 </script>
 
+<!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     var app = new Vue({
@@ -246,10 +288,24 @@
             {'city': 'MONRVIA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
             {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
             {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
-        ]
+        ],
+        sideMenu: false,
+    },
+    watch: {
+        // Not sure what this does. If side menu works delete.
+        isModalVisible: function() {
+            if(this.sideMenu) {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+            } else {
+                document.documentElement.style.overflow = 'auto'
+            }
+        }
     }
     })
 </script>
+
+<!-- Vanilla -->
 <script>
     var myNav = document.getElementById('nav');
     var logo = document.getElementById('nav-logo');
