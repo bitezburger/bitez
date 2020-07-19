@@ -59,10 +59,10 @@
     </nav>
     <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
         <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
-        <a href="#home" @click="hamburger=false">Home</a>
-        <a href="#about" @click="hamburger=false">About</a>
-        <a href="#menu" @click="hamburger=false">Menu</a>
-        <a href="#find-us" @click="hamburger=false">Find Us</a>    
+        <a href="#home" @click="sideMenu=false">Home</a>
+        <a href="#about" @click="sideMenu=false">About</a>
+        <a href="#menu" @click="sideMenu=false">Menu</a>
+        <a href="#find-us" @click="sideMenu=false">Find Us</a>    
         <a href="https://www.linkedin.com/in/kristenescobar97/" target="_blank"><img src="https://img.icons8.com/plasticine/60/000000/linkedin.png" alt="Linkedin icon"></a>
     </div>
     <div class="hero-caption">
@@ -301,6 +301,13 @@
                 document.documentElement.style.overflow = 'auto'
             }
         }
+    },
+    created: function() {
+        var currentTime = new Date();
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var weekday = days[currentTime.getDay()];
+        console.log("The day is: " + weekday);
+        console.log("The time is: " + currentTime.getHours() + " : " + currentTime.getMinutes());
     }
     })
 </script>
