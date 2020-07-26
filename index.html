@@ -57,7 +57,7 @@
             </div>
         </div>
     </nav>
-    <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
+    <div class="mobile-nav menu-active" v-if="sideMenu==true" v-cloak>
         <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
         <a href="#home" @click="sideMenu=false">Home</a>
         <a href="#about" @click="sideMenu=false">About</a>
@@ -66,7 +66,8 @@
         <a href="https://www.linkedin.com/in/kristenescobar97/" target="_blank"><img src="https://img.icons8.com/plasticine/60/000000/linkedin.png" alt="Linkedin icon"></a>
     </div>
     <div class="hero-caption">
-        <h1>Grab a Bitez</h1>
+        <img src="./static/images/Grab a Bitez.PNG"><br>
+        <img src="./static/images/Bitez.PNG">
     </div>
 </header>
 
@@ -184,7 +185,7 @@
         </div>
         <div class="button stay-informed-cta">
             <p>Don't see a city near you?</p>
-            <a href="#stay-informed">LEARN MORE</a>
+            <a href="#sign-up">LEARN MORE</a>
         </div>
     </div>
 </section>
@@ -219,7 +220,7 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive emails with additional information and relevant offers from Bitez.</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
             </div>
         </div>
@@ -249,11 +250,11 @@
                     <p>info@bitezburger.com</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 footer-social">
                 <h3>FOLLOW US</h3>
-                <img>
-                <img>
-                <img>
+                <img src="static/images/instagram-icon.png">
+                <img src="static/images/twitter-icon.png">
+                <img src="static/images/facebook-icon.png">
             </div>
         </div>
     </div>

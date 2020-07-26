@@ -105,7 +105,7 @@ h2 {
 
 /* Logo */
 .navbar div:first-of-type {
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -122,7 +122,7 @@ h2 {
     position: fixed !important;
     top: -15px !important;
     z-index: 11 !important;
-    left: 0px;
+    left: 20px !important;
     transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
@@ -195,6 +195,10 @@ h2 {
     transform: translateY(-50%);
     color: var(--whitemocha);
     text-align: center;
+}
+
+.hero-caption img {
+    width: 450px;
 }
 
 .hero-caption h1 {
@@ -366,12 +370,40 @@ h2 {
 
 #sign-up {
     padding-bottom: 25px;
+    background-color: var(--whitemocha);
 }
 
 #sign-up p {
     text-align: center;
 }
 
+.form-control {
+    border: 1px solid var(--reddish);
+}
+
+.form-control:focus {
+    border-color: var(--raincloud);
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: var(--reddish);
+    color: var(--whitemocha);
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    border-radius: 9px;
+    transition: all .6s ease;
+    border-color: var(--reddish);
+}
+
+.btn-primary:hover {
+    background-color: #F36874;
+    border-color: #F36874;
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
+}
 
 /* Footer
 ------------------------------------*/
@@ -386,7 +418,7 @@ h2 {
 }
 
 .footer-icon img {
-    width: 250px;
+    width: 230px;
 }
 
 .footer-info {
@@ -401,8 +433,8 @@ h2 {
 .footer-phone {
     margin-bottom: 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 50%;
+    grid-template-columns: 1fr 2fr;
+    width: 60%;
     text-align: left;
     margin: auto;
 }
@@ -412,11 +444,48 @@ h2 {
     padding-right: 20px;
 }
 
+.footer-social img {
+    padding-right: 15px;
+    width: 50px;
+    transition: all .4s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1) rotate(-10deg);
+    cursor: pointer;
+}
+
 .copyright-info {
     margin: 30px 0 0 0;
     text-align: center;
     padding-bottom: 30px;
 }
+
+
+/* Transitions
+------------------------------------*/
+.slide-enter-active, .slide-leave-active {
+    transition: slide .5s;
+}
+.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.menu-active {
+    animation: slide 0.3s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+     }
+     100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+  }
+
 
 /* Media Queries 
 ------------------------------------*/
@@ -444,4 +513,22 @@ h2 {
     .location {
         margin: 25px auto auto auto;
     }
+    .footer-social {
+        padding-top: 30px;
+    }
+    .copyright-info {
+        font-size: 12px;
+    }
   }
+
+@media screen and (max-width: 800px) {
+    .hero-caption img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2rem;
+    }
+}
