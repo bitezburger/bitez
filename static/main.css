@@ -118,9 +118,9 @@ h2 {
 }
 
 .navbar-img-bg-scrolled {
-    width: 125px !important;
+    width: 100px !important;
     position: fixed !important;
-    top: -15px !important;
+    top: -13px !important;
     z-index: 11 !important;
     left: 20px !important;
     transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -128,7 +128,7 @@ h2 {
 
 /* Navigation List */
 .navbar-nav {
-    margin: 15px 0;
+    margin: 5px 0;
     font-family: 'Raleway', sans-serif;
     font-size: 1.3em;
 }
@@ -174,6 +174,7 @@ h2 {
 ------------------------------------*/
 #hero {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./images/burgerHero.svg') no-repeat;
+    /* background: linear-gradient(90deg, var(--whitemocha) 50%, var(--reddish) 50%); */
     display: block;
     position: relative;
     width: 100%;
@@ -347,17 +348,34 @@ h2 {
 }
 
 #find-us h3 {
-    text-align: center;
     font-family: 'Courier Prime', monospace;
+    display: inline-block;
 }
 
 .vroom {
     text-align: center;
     margin-top: 45px;
+    margin-bottom: 35px;
 }
 
 .location {
-    margin: 50px auto auto auto;
+    padding: 25px;
+    padding-bottom: 20px;
+    margin-top: 10px !important;
+}
+
+.location-title {
+    text-align: center;
+}
+
+.location-marker {
+    width: 30px;
+    display: inline-block;
+    transform: translate(-3px, -3px)
+}
+
+.location p {
+    font-size: 1.3em;
 }
 
 .stay-informed-cta {
