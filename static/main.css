@@ -49,6 +49,7 @@ html {
 
 .body-content h2 {
     padding-top: 25px;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -234,7 +235,8 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 2px;
-    line-height: 1.5em;;
+    line-height: 1.5em;
+    background: var(--reddish);
 }
 
 .aboutContentLarge {
@@ -369,12 +371,18 @@ h2 {
 ------------------------------------*/
 
 #sign-up {
-    padding-bottom: 25px;
-    background-color: var(--whitemocha);
+    padding-bottom: 100px;
+    background-color: #ffffff;
 }
 
 #sign-up p {
     text-align: center;
+    margin-bottom: 45px;
+}
+
+.stay-informed-img {
+    padding-right: 50px;
+    width: 500px;
 }
 
 .form-control {
@@ -489,7 +497,36 @@ label {
 
 /* Media Queries 
 ------------------------------------*/
-@media screen and (max-width: 500px) {
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .stay-informed-img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hero-caption img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .stay-informed-img {
+        width: 275px;
+        padding-right: 0px;
+    }
+    #sign-up .row div:first-of-type, .form {
+        margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
     .aboutContent {
         background: var(--reddish);
     }
@@ -520,15 +557,3 @@ label {
         font-size: 12px;
     }
   }
-
-@media screen and (max-width: 800px) {
-    .hero-caption img {
-        width: 250px;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 2rem;
-    }
-}
