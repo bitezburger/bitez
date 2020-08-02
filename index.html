@@ -36,8 +36,8 @@
     <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
         <div>
             <!-- Mobile Hamburger Icon -->
-            <div @click="sideMenu = true" class="hamburger-menu d-block d-sm-none">
-                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon" width="35">
+            <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
+                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon">
             </div>
             <div class="collapse navbar-collapse" id="">
                 <ul class="navbar-nav ml-auto">
@@ -57,14 +57,24 @@
             </div>
         </div>
     </nav>
-    <div class="mobile-nav menu-active" v-if="sideMenu==true" v-cloak>
-        <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
-        <a href="#home" @click="sideMenu=false">Home</a>
-        <a href="#about" @click="sideMenu=false">About</a>
-        <a href="#menu" @click="sideMenu=false">Menu</a>
-        <a href="#find-us" @click="sideMenu=false">Find Us</a>    
-        <a href="https://www.linkedin.com/in/kristenescobar97/" target="_blank"><img src="https://img.icons8.com/plasticine/60/000000/linkedin.png" alt="Linkedin icon"></a>
-    </div>
+
+    <transition name="slide">
+        <div class="mobile-nav menu-active" v-if="sideMenu==true" v-cloak>
+            <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
+            <div class="navigation-links">
+                <a href="#home" @click="sideMenu=false">Home</a>
+                <a href="#about" @click="sideMenu=false">About</a>
+                <a href="#menu" @click="sideMenu=false">Menu</a>
+                <a href="#find-us" @click="sideMenu=false">Find Us</a>   
+            </div>
+            <div class="col-6 m-auto navigation-social-media">
+                <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
+                <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
+                <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
+            </div>
+        </div>
+    </transition>
+
     <div class="hero-caption">
         <img src="./static/images/Grab a Bitez.PNG"><br>
         <img src="./static/images/Bitez.PNG">
@@ -97,8 +107,8 @@
             <div class="menu-items">
                 <div class="container">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-11">Burger #1</h4>
-                        <p class="col-4 col-md-1">$4.99</p>
+                        <h4 class="col-8 col-md-10">Burger #1</h4>
+                        <p class="col-4 col-md-2">$4.99</p>
                     </div>
                     <hr class="dotted">
                     <p>
@@ -107,8 +117,8 @@
                 </div>
                 <div class="container">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-11">Burger #2</h4>
-                        <p class="col-4 col-md-1">$4.99</p>
+                        <h4 class="col-8 col-md-10">Burger #2</h4>
+                        <p class="col-4 col-md-2">$4.99</p>
                     </div>
                     <hr class="dotted">
                     <p>
@@ -130,8 +140,8 @@
             <div class="menu-items">
                 <div class="container">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-11">French Fries</h4>
-                        <p class="col-4 col-md-1">$4.99</p>
+                        <h4 class="col-8 col-md-10">French Fries</h4>
+                        <p class="col-4 col-md-2">$4.99</p>
                     </div>
                     <hr class="dotted">
                     <p>
@@ -140,8 +150,8 @@
                 </div>
                 <div class="container">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-11">Seasoned French Fries</h4>
-                        <p class="col-4 col-md-1">$4.99</p>
+                        <h4 class="col-8 col-md-10">Seasoned French Fries</h4>
+                        <p class="col-4 col-md-2">$4.99</p>
                     </div>
                     <hr class="dotted">
                     <p>
@@ -204,10 +214,10 @@
         </div>
         <div class="row">
             <div class="col-10 col-md-6">
-                <img class="stay-informed-img" src="static/images/stay-informed.jpg">
+                <img class="stay-informed-img m-auto" src="static/images/stay-informed.jpg">
             </div>
 
-            <div class="col-10 col-md-6 form">
+            <div class="col-10 col-md-6 m-auto">
                 <form>
                 <div class="form-group">
                     <label for="inputFirstName">First Name</label>

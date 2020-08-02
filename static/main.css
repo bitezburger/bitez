@@ -102,6 +102,8 @@ h2 {
 
 .hamburger-menu img {
     cursor: pointer;
+    margin: 10px;
+    width: 40px;
 }
 
 /* Logo */
@@ -154,7 +156,7 @@ h2 {
     margin: 20px 20px 0 0;
 }
 
-.mobile-nav a{
+.mobile-nav a {
     display: block;
     text-align: center;
     margin: 15px 0 15px 0;
@@ -163,12 +165,21 @@ h2 {
     color: var(--whitemocha);
 }
 
-.mobile-nav a:first-of-type {
+.navigation-links {
     margin-top: 35%;
 }
 
-.mobile-nav a:last-of-type {
-    margin-top: 50px;
+.navigation-social-media {
+    text-align: center;
+}
+
+.navigation-social-media a {
+    display: inline-block;
+}
+
+.navigation-social-media a:hover {
+    transform: scale(1.1) rotate(-10deg);
+    cursor: pointer;
 }
 
 /* Hero
@@ -238,6 +249,7 @@ h2 {
     letter-spacing: 2px;
     line-height: 1.5em;
     background: var(--reddish);
+    border-radius: 10px;
 }
 
 .aboutContentLarge {
@@ -352,6 +364,7 @@ h2 {
 #find-us h3 {
     font-family: 'Courier Prime', monospace;
     display: inline-block;
+    font-size: 1.7rem;
 }
 
 .vroom {
@@ -377,12 +390,12 @@ h2 {
 }
 
 .location p {
-    font-size: 1.3em;
+    font-size: 1.15em;
 }
 
 .stay-informed-cta {
     text-align: center;
-    padding: 20px 0 30px 0;
+    padding: 20px 0 40px 0;
 }
 
 /* Sign Up
@@ -401,6 +414,7 @@ h2 {
 .stay-informed-img {
     padding-right: 50px;
     width: 500px;
+    display: block;
 }
 
 .form-control {
@@ -491,25 +505,25 @@ label {
 /* Transitions
 ------------------------------------*/
 .slide-enter-active, .slide-leave-active {
-    transition: slide .5s;
+    animation: slide .5s;
 }
-.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
+.slide-enter, .slide-leave-to {
+    animation: slide .5s reverse;
 }
 
 .menu-active {
-    animation: slide 0.3s ease-in-out;
+    /* animation: slide 0.3s ease-in-out; */
 }
 
 @keyframes slide {
     0% {
         opacity: 0;
         transform: translateX(100%);
-     }
-     100% {
+    }
+    100% {
         opacity: 1;
         transform: translateX(0);
-     }
+    }
   }
 
 
@@ -539,14 +553,23 @@ label {
         width: 275px;
         padding-right: 0px;
     }
-    #sign-up .row div:first-of-type, .form {
+    #sign-up .row div:first-of-type {
         margin: auto;
     }
-  }
 
-  @media screen and (max-width: 500px) {
+    #sign-up button {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #about {
+        height: 80vh;
+    }
+
     .aboutContent {
         background: var(--reddish);
+        font-size: 1rem;
     }
     .navbar-brand img {
         width: 235px;
@@ -561,9 +584,6 @@ label {
     }
     .navbar div:first-of-type {
         width: 95%;
-    }
-    .hamburger-menu img {
-        padding: 10px 0;
     }
     .location {
         margin: 25px auto auto auto;
