@@ -190,7 +190,7 @@
                             </p>
                             <p class="col-6">
                                 {{ location.when }}<br>
-                                {{ location.location }}<br>
+                                {{ location.address }}<br>
                                 {{ location.hours }}
                             </p>
                         </div>
@@ -225,14 +225,16 @@
 
                     <label for="inputLastName">Last Name</label>
                     <input type="text" class="form-control" id="inputLastName">
-                </div>
-                <div class="form-group">
+
+                    <label for="inputZipCode">Zip Code</label>
+                    <input type="text" class="form-control" id="inputZipCode">
+
                     <label for="exampleInputEmail1">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive awesome news when Bitez is coming to my area.</label>
+                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive awesome news about when Bitez is coming to my area.</label>
                 </div>
                 <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>
@@ -271,21 +273,6 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
-<script>
-    window.onload = function() {
-	lax.setup() // init
-
-	const updateLax = () => {
-		lax.update(window.scrollY)
-		window.requestAnimationFrame(updateLax)
-	}
-
-	window.requestAnimationFrame(updateLax)
-}
-</script>
-
 <!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
@@ -293,15 +280,27 @@
     el: '#app',
     data: {
         locations: [
-            {'city': 'ARCADIA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'MONROVIA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'location': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'ARCADIA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'MONROVIA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
         ],
         sideMenu: false,
     },
+    methods: {
+        loadLocations: function() {
+            fetch('https://ruoyuchen.pythonanywhere.com/googlesheets', {
+                method: 'GET',
+                mode: 'cors'
+            })
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data);
+                this.locations = data.locations;
+            });
+        }
+    },
     watch: {
-        // Not sure what this does. If side menu works delete.
         isModalVisible: function() {
             if(this.sideMenu) {
                 document.documentElement.style.overflow = 'hidden';
@@ -317,6 +316,7 @@
         var weekday = days[currentTime.getDay()];
         console.log("The day is: " + weekday);
         console.log("The time is: " + currentTime.getHours() + " : " + currentTime.getMinutes());
+        this.loadLocations();
     }
     })
 </script>
@@ -329,17 +329,17 @@
     window.onscroll = function () { 
         "use strict";
         if (document.body.scrollTop >= heightOfNav || document.documentElement.scrollTop >= heightOfNav ) {
-            myNav.classList.add("bg-dark");
-        } 
-        else {
-            myNav.classList.remove("bg-dark");
-        }
-
-        if (document.body.scrollTop >= heightOfNav + 30 || document.documentElement.scrollTop >= heightOfNav + 30 ) {
             logo.classList.add('navbar-img-bg-scrolled');
         } 
         else {
             logo.classList.remove('navbar-img-bg-scrolled');
+        }
+
+        if (document.body.scrollTop >= heightOfNav + 20 || document.documentElement.scrollTop >= heightOfNav + 20 ) {
+            myNav.classList.add("bg-dark");
+        } 
+        else {
+            myNav.classList.remove("bg-dark");
         }
     };
 </script>
