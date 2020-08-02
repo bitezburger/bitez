@@ -59,7 +59,7 @@
     </nav>
 
     <transition name="slide">
-        <div class="mobile-nav menu-active" v-if="sideMenu==true" v-cloak>
+        <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
             <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
             <div class="navigation-links">
                 <a href="#home" @click="sideMenu=false">Home</a>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive emails with additional information and relevant offers from Bitez.</label>
+                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive awesome news when Bitez is coming to my area.</label>
                 </div>
                 <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </form>

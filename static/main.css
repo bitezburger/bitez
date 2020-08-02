@@ -474,7 +474,7 @@ label {
     margin-bottom: 0px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    width: 60%;
+    width: 70%;
     text-align: left;
     margin: auto;
 }
@@ -504,15 +504,11 @@ label {
 
 /* Transitions
 ------------------------------------*/
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active {
     animation: slide .5s;
 }
-.slide-enter, .slide-leave-to {
+.slide-leave-active {
     animation: slide .5s reverse;
-}
-
-.menu-active {
-    /* animation: slide 0.3s ease-in-out; */
 }
 
 @keyframes slide {
@@ -557,14 +553,24 @@ label {
         margin: auto;
     }
 
+    #sign-up p {
+        width: 75%;
+        margin: auto;
+        margin-bottom: 45px;
+    }
+
     #sign-up button {
         display: block;
         margin: auto;
         margin-top: 20px;
     }
 
+    #sign-up form {
+        margin-top: 30px;
+    }
+
     #about {
-        height: 80vh;
+        height: 90vh;
     }
 
     .aboutContent {
