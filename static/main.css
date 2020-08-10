@@ -582,7 +582,7 @@ label {
         font-size: 1rem;
     }
     .navbar-brand img {
-        width: 235px;
+        width: 200px;
         top: 25px;
         left: 50%;
         transform: translateX(-50%);
