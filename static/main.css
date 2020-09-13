@@ -323,7 +323,7 @@ h2 {
     font-size: 1.2em;
 }
 
-.menu-items .container:first-of-type {
+.menu-items .container {
     margin-bottom: 30px;
 }
 

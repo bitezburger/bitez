@@ -101,28 +101,18 @@
                 <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="35">
                 <h3>Hamburgers</h3>
                 <p>
-                    Our deliciously juicy burgers come any way you want! Pick your add-ons and we'll handle the rest. 
+                    Our deliciously juicy burgers are each made fresh to order! Order each item as a single or double (2x meat & cheese - additional $1.75)
                 </p>
             </div>
             <div class="menu-items">
-                <div class="container">
+                <div class="container" v-for="item in burgerMenuItems">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-10">Bitez</h4>
-                        <p class="col-4 col-md-2">$4.99</p>
+                        <h4 class="col-8 col-md-10">{{ item.name }}</h4>
+                        <p class="col-4 col-md-2">{{ item.price }}</p>
                     </div>
                     <hr class="dotted">
                     <p>
-                        Single or Double Hamburger with your choice of lettuce, tomato, pickle, or onion.
-                    </p>
-                </div>
-                <div class="container">
-                    <div class="row menu-row">
-                        <h4 class="col-8 col-md-10">Cheesy Bitez</h4>
-                        <p class="col-4 col-md-2">$4.99</p>
-                    </div>
-                    <hr class="dotted">
-                    <p>
-                        Single or Double Cheeseburger with your choice of lettuce, tomato, pickle, or onion.
+                        {{ item.description }}
                     </p>
                 </div>
             </div>
@@ -132,30 +122,20 @@
         <div class="french-fries">
             <div class="food-description">
                 <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="30">
-                <h3>French Fries</h3>
+                <h3>Sides</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
                 </p>
             </div>
             <div class="menu-items">
-                <div class="container">
+                <div class="container" v-for="item in sideMenuItems">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-10">French Fries</h4>
-                        <p class="col-4 col-md-2">$4.99</p>
+                        <h4 class="col-8 col-md-10"> {{ item.name }} </h4>
+                        <p class="col-4 col-md-2"> {{ item.price }} </p>
                     </div>
                     <hr class="dotted">
                     <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
-                    </p>
-                </div>
-                <div class="container">
-                    <div class="row menu-row">
-                        <h4 class="col-8 col-md-10">Seasoned French Fries</h4>
-                        <p class="col-4 col-md-2">$4.99</p>
-                    </div>
-                    <hr class="dotted">
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et. 
+                        {{ item.description }}
                     </p>
                 </div>
             </div>
@@ -284,6 +264,18 @@
             {'city': 'MONROVIA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
             {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
             {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
+        ],
+        burgerMenuItems: [
+            {'name': 'The Classic', 'price': '$6', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Original Hamburger', 'price': '$4.50', 'description': 'American beef patty spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Original Cheeseburger', 'price': '$5', 'description': 'American beef patty and cheddar cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Mushroom Swiss', 'price': '$6.75', 'description': 'American beef patty, mushrooms and Swiss cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Protein', 'price': '$5.50', 'description': 'American beef patty, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Vegetarian', 'price': '$4', 'description': 'Mushroom, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped with a freshly baked bun'},
+        ],
+        sideMenuItems: [
+            {'name': 'The Classic', 'price': '$6', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
+            {'name': 'The Original Hamburger', 'price': '$4.50', 'description': 'American beef patty spread with our special Bitez sauce, topped on a freshly baked bun'},
         ],
         sideMenu: false,
     },
