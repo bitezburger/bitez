@@ -185,7 +185,7 @@ h2 {
 /* Hero
 ------------------------------------*/
 #hero {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./burger-close-up.jpg') no-repeat;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./images/burger-close-up.jpg') no-repeat;
     background-position: 50% 40%;
     display: block;
     position: relative;
@@ -211,7 +211,7 @@ h2 {
 }
 
 .hero-caption img {
-    width: 450px;
+    width: 375px;
 }
 
 .hero-caption h1 {
@@ -223,7 +223,7 @@ h2 {
 /* About
 ------------------------------------*/
 #about {
-    background: url('./images/about-background-img@2x.jpg') repeat;
+    background: url('./images/about-background-image.png') repeat;
     display: block;
     position: relative;
     width: 100%;
@@ -248,7 +248,7 @@ h2 {
     font-size: 1.1rem;
     letter-spacing: 2px;
     line-height: 1.5em;
-    background: var(--reddish);
+    background: #cf3a42;
     border-radius: 10px;
 }
 
@@ -575,7 +575,7 @@ label {
     }
 
     .aboutContent {
-        background: var(--reddish);
+        background: #cf3a42;
         font-size: 1rem;
     }
     .navbar-brand img {
