@@ -113,23 +113,27 @@ h2 {
 }
 
 .navbar-brand img {
-    width: 280px;
+    width: 250px;
     position: absolute;
     top: -20px;
     left: 0;
-    transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all .4s;
 }
 
 .navbar-img-bg-scrolled {
-    width: 100px !important;
+    width: 75px !important;
     position: fixed !important;
-    top: -13px !important;
+    top: -3px !important;
     z-index: 11 !important;
     left: 20px !important;
     transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 /* Navigation List */
+.navbar {
+    padding: 18px 0 9px 0 !important;
+}
+
 .navbar-nav {
     margin: 5px 0;
     font-family: 'Raleway', sans-serif;
@@ -138,6 +142,14 @@ h2 {
 
 .nav-link {
     color: var(--whitemocha) !important;
+    transition: all .3s;
+    font-size: 1.1rem;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.nav-link:hover {
+    color: var(--peachy) !important;
 }
 
 /* Mobile Navigation List */
@@ -529,7 +541,7 @@ label {
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 2rem;
+        padding-right: 1.2rem;
     }
 }
 
