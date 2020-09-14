@@ -185,8 +185,8 @@ h2 {
 /* Hero
 ------------------------------------*/
 #hero {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./images/burgerHero.svg') no-repeat;
-    /* background: linear-gradient(90deg, var(--whitemocha) 50%, var(--reddish) 50%); */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, .45)), url('./burger-close-up.jpg') no-repeat;
+    background-position: 50% 40%;
     display: block;
     position: relative;
     width: 100%;
