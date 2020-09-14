@@ -252,10 +252,6 @@ h2 {
     border-radius: 10px;
 }
 
-.aboutContentLarge {
-    /* font-size:5rem; */
-}
-
 .attract {
     font-size: 1.4rem;
     font-weight: bolder;
@@ -455,6 +451,7 @@ label {
 #footer {
     background-color: var(--raincloud);
     color: var(--whitemocha);
+    padding-top: 10px;
 }
 
 .footer-icon {
@@ -583,9 +580,9 @@ label {
     }
     .navbar-brand img {
         width: 200px;
-        top: 25px;
+        top: 5px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(.8);
     }
     .navbar-img-bg-scrolled {
         width: 100px !important;

@@ -85,7 +85,12 @@
 <section id="about">
     <div class="aboutContent col-10 col-md-8 col-lg-6">
         <p>
-            <span class="aboutContentLarge">A</span>t Bitez, our <span class="attract">mission</span> is to Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna <span class="attract">takimata</span> erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea <span class="attract">takimata</span> sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+            At Bitez, our <span class="attract">mission</span> is to provide the highlest level of customer service with speed and efficiency. 
+            We serve quality products, prepared the same way <span class="attract">every</span> time, at a fair price. We stand behind our 
+            products and know they will create lifetime patrons.
+
+            To support our mission, we treat each team member with <span class="attract">respect</span> and encouragement to 
+            nurture the foundation for our success and growth.
         </p>
     </div>
 </section>
@@ -163,16 +168,16 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <p class="col-6" style="text-align: right;">
-                                <b>When</b><br>
-                                <b>Location</b><br>
-                                <b>Hours</b>
-                            </p>
-                            <p class="col-6">
-                                {{ location.when }}<br>
-                                {{ location.address }}<br>
-                                {{ location.hours }}
-                            </p>
+                            <div class="col-6" style="text-align: right;">
+                                <p>When</p>
+                                <p>Location</p>
+                                <p>Hours</p>
+                            </div>
+                            <div class="col-6">
+                                <p>{{ location.when }}</p>
+                                <p>{{ location.address }}</p>
+                                <p>{{ location.hours }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -227,7 +232,7 @@
 
 <footer id="footer">
     <div class="footer-icon">
-        <img src="./static/images/BitezLogo.svg">
+        <img src="./static/images/BitezTruck.png">
     </div>
     <div class="container">
         <div class="row footer-info">
@@ -260,10 +265,8 @@
     el: '#app',
     data: {
         locations: [
-            {'city': 'ARCADIA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'MONROVIA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'PASADENA, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
-            {'city': 'EL MONTE, CA', 'when': 'April 3, 2020', 'address': '2323 Lake Ave.', 'hours': '3-5pm'},
+            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA'},
+            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA'},
         ],
         burgerMenuItems: [
             {'name': 'The Classic', 'price': '$6', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a freshly baked bun'},
