@@ -222,8 +222,12 @@ h2 {
     text-align: center;
 }
 
+.hero-caption img:first-of-type {
+    margin-right: 15px;
+}
+
 .hero-caption img {
-    width: 375px;
+    width: 275px;
 }
 
 .hero-caption h1 {
@@ -255,17 +259,17 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     border: white 2px solid;
-    padding: 7% 6%;
+    padding: 6% 5%;
     font-family: 'Raleway', sans-serif;
     font-size: 1.1rem;
     letter-spacing: 2px;
-    line-height: 1.5em;
+    line-height: 1.9em;
     background: #cf3a42;
     border-radius: 10px;
 }
 
 .attract {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bolder;
 }
 
