@@ -380,14 +380,8 @@ h2 {
     background-color: var(--peachy);
 }
 
-#find-us h2 {
-    margin-bottom: -20px;
-    padding-top: 60px;
-}
-
 #find-us h3 {
     font-family: 'Courier Prime', monospace;
-    display: inline-block;
     font-size: 1.7rem;
 }
 
@@ -398,14 +392,45 @@ h2 {
 }
 
 .location {
-    padding: 25px;
-    padding-bottom: 20px;
-    margin-top: 10px !important;
+    padding: 0px;
+    margin: 10px auto auto auto !important;
     position: relative;
+    border: 1px solid grey;
+    width: 350px;
 }
 
 .location-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.location-map {
+    height:275px;
+    background: rgb(225, 225, 225);
+}
+
+.location-date {
+    font-size: 1.1rem;
     text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    margin: auto;
+    transform: translateY(-28px);
+    display: table;
+    background: white;
+    font-weight: bolder;
+}
+
+.location-details {
+    background: white;
+}
+
+.location-address {
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    transform: translateY(-13px);
 }
 
 .location-marker {
@@ -414,8 +439,15 @@ h2 {
     transform: translate(-3px, -3px)
 }
 
+.location-hours {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}
+
 .location p {
     font-size: 1.15em;
+    margin-bottom: 0;
 }
 
 .stay-informed-cta {
@@ -622,8 +654,8 @@ label {
         width: 95%;
     }
     .location {
+        width: 90%;
         margin: 25px auto auto auto;
-        padding: 20px;
     }
     .footer-social {
         padding-top: 30px;
