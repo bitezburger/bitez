@@ -66,7 +66,7 @@
                 <a href="#about" @click="sideMenu=false">About</a>
                 <a href="#menu" @click="sideMenu=false">Menu</a>
                 <a href="#find-us" @click="sideMenu=false">Find Us</a>   
-                <div class="col-10 m-auto navigation-social-media">
+                <div class="navigation-social-media">
                     <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
                     <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
                     <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
@@ -157,38 +157,15 @@
             <img src="./static/images/food-truck-icon.png">
         </div> -->
         <div class="container">
-            <!-- ROW 1 -->
             <div class="row">
-                <!-- <div v-for="location in locations" class="location col-10 col-md-6">
-                    <div class="location-title">
-                        <img class="location-marker" src="./static/images/location-marker.png" alt="location marker">
-                        <h3>
-                            {{ location.city }}
-                        </h3>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6" style="text-align: right;">
-                                <p>When</p>
-                                <p>Location</p>
-                                <p>Hours</p>
-                            </div>
-                            <div class="col-6">
-                                <p>{{ location.when }}</p>
-                                <p>{{ location.address }}</p>
-                                <p>{{ location.hours }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div v-for="location in locations" class="location">
+                <div v-for="(location, index) in locations" :key="index" class="location">
                     <header class="location-title">
                         <h3>
                             {{ location.city }}
                         </h3>
                         <p class="location-hours">{{ location.hours }}</p>
                     </header>
-                    <main class="location-map">
+                    <main :id="'map-'+index" class="location-map">
                         <div class="row">
                             <div class="col-6">
                             </div>
@@ -280,6 +257,10 @@
 
 </div>
 
+<!-- Mapbox -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
 <!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
@@ -287,8 +268,8 @@
     el: '#app',
     data: {
         locations: [
-            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA'},
-            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA'},
+            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},
+            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},
         ],
         burgerMenuItems: [
             {'name': 'The Classic', 'price': '$6', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
@@ -314,7 +295,20 @@
             .then((data) => {
                 console.log(data);
                 this.locations = data.locations;
-            });
+            })
+            // .then(() => {
+            //     var locations = this.locations;
+            //     mapboxgl.accessToken = '';
+
+            //     for (var locationIndex = 0; locationIndex < locations.length; locationIndex++) {
+            //         var map = new mapboxgl.Map({
+            //             container: 'map-' + locationIndex,
+            //             style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            //             center: [locations[locationIndex]['longitude'], locations[locationIndex]['latitude'] ], // starting position [lng, lat]
+            //             zoom: 10 // starting zoom
+            //         });
+            //     }
+            // })
         }
     },
     watch: {

@@ -10,6 +10,10 @@ COLORS
     #BD0F1E - red - reddish
     #FFEBC2 - yellow - peachy
 
+Z-Index
+    Fixed-Top - 10
+    Hero::after - 0
+
 /* Global styles
 ------------------------------------*/
 html {
@@ -102,7 +106,7 @@ h2 {
 
 .hamburger-menu img {
     cursor: pointer;
-    margin: 10px;
+    margin: 0px;
     width: 40px;
 }
 
@@ -118,21 +122,20 @@ h2 {
     top: -20px;
     left: 0;
     transition: all .4s;
-    z-index: 1;
+    z-index: 11;
 }
 
 .navbar-img-bg-scrolled {
     width: 75px !important;
     position: fixed !important;
-    top: -3px !important;
-    z-index: 11 !important;
+    top: -7px !important;
     left: 20px !important;
     transition: all .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 /* Navigation List */
 .navbar {
-    padding: 18px 0 9px 0 !important;
+    padding: 10px 0 !important;
 }
 
 .navbar-nav {
@@ -382,6 +385,7 @@ h2 {
 ------------------------------------*/
 #find-us {
     background-color: var(--peachy);
+    /* background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
 }
 
 #find-us h3 {
@@ -397,16 +401,20 @@ h2 {
 
 .location {
     padding: 0px;
-    margin: 10px auto auto auto !important;
+    margin: 15px auto auto auto !important;
     position: relative;
-    border: 1px solid grey;
+    border: 1px solid rgba(235,236,237,.5);
+    border-radius: 3px;
     width: 350px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+
 }
 
 .location-title {
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 9;
 }
 
 .location-map {
@@ -424,6 +432,7 @@ h2 {
     display: table;
     background: white;
     font-weight: bolder;
+    border-radius: 3px;
 }
 
 .location-details {
@@ -432,7 +441,7 @@ h2 {
 
 .location-address {
     text-align: center;
-    width: 85%;
+    width: 90%;
     margin: auto;
     transform: translateY(-13px);
 }
