@@ -227,7 +227,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, .25));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, .15));
     z-index: 0;
 } */
 
@@ -271,6 +271,17 @@ h2 {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 25%, rgba(0, 0, 0, .05));
+    z-index: 0;
 }
 
 /* About
@@ -677,7 +688,7 @@ label {
         transform: translateX(-50%) scale(.8);
     }
     .navbar-img-bg-scrolled {
-        width: 100px !important;
+        width: 75px !important;
         left: 0px !important;
         transform: unset !important;
     }
