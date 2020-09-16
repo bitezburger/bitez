@@ -14,10 +14,11 @@
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles -->
     <link href="./static/main.css" rel="stylesheet">
+    <link href="./static/carousel.css" rel="stylesheet">
 
-  <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
     <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
@@ -29,6 +30,26 @@
 <div id="app">
 <!-- ******************** HEADER / NAV ******************** -->
 <header id="hero">
+
+    <!-- Carousel -->
+    <!-- <agile class="carousel" :autoplay="true" :autoplay-speed="4500">
+        <div class="slide" v-for="n in 6" :key="n" :class="`slide--${n}`">
+            <h3>{{ n }}</h3>
+        </div>
+        <template slot="prevButton">prev</template>
+    <template slot="nextButton">next</template>
+    </agile> -->
+
+    <agile class="carousel" :autoplay="false" :autoplay-speed="4500">
+        
+        <img class="slide" src="./static/images/burgerCloseUp.jpg" alt="close up shot of burger and ingredients"/>
+        <img class="slide" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
+        
+        
+        <template slot="prevButton">prev</template>
+        <template slot="nextButton">next</template>
+    </agile>
+
     <a class="navbar-brand" href="index.html">
         <img id="nav-logo" src="./static/images/BitezLogo.svg">
     </a>
@@ -255,6 +276,7 @@
     <p class="copyright-info">Copyright &copy;2020 Bitez. All rights reserved.</p>
 </footer>
 
+
 </div>
 
 <!-- Mapbox -->
@@ -263,9 +285,14 @@
 
 <!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-agile"></script>
+
 <script>
     var app = new Vue({
     el: '#app',
+    components: {
+        agile: VueAgile 
+    },
     data: {
         locations: [
             {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},

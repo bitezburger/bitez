@@ -169,6 +169,7 @@ h2 {
 
 #exit-button{
     float: right;
+    cursor: pointer;
     margin: 20px 20px 0 0;
 }
 
@@ -204,21 +205,22 @@ h2 {
 /* Hero
 ------------------------------------*/
 #hero {
-    background: url('./images/burgerCloseUp.jpg') no-repeat;
+    /* background-image: url('./images/burgerCloseUp.jpg');
+    background-repeat: no-repeat;
     background-position: 50% 40%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; */
     display: block;
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 350px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
-#hero::after {
+/* #hero::after {
     content: "";
     position: absolute;
     top: 0;
@@ -227,7 +229,7 @@ h2 {
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.40), rgba(0, 0, 0, .25));
     z-index: 0;
-}
+} */
 
 .hero-caption {
     position: absolute;
@@ -253,6 +255,23 @@ h2 {
     font-size: 80px;
     font-family: 'Courier Prime', monospace;
     letter-spacing: 10px;
+}
+
+.carousel {
+    height: 100%;
+}
+
+.slide {
+    /* background-image: url('./images/burgerCloseUp.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed; */
+    height: 100vh;
+    width: 100%;
 }
 
 /* About
