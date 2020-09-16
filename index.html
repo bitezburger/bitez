@@ -42,9 +42,18 @@
 
     <agile class="carousel" :autoplay="false" :autoplay-speed="4500">
         
-        <img class="slide" src="./static/images/burgerCloseUp.jpg" alt="close up shot of burger and ingredients"/>
-        <img class="slide" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
-        
+        <div class="slide">
+            <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="close up shot of burger and ingredients"/>
+            <div class="hero-caption">
+                <img src="./static/images/Grab a Bitez.PNG"><br>
+                <img src="./static/images/Bitez.PNG">
+            </div>
+        </div>
+
+        <div class="slide">
+            <img class="slide-image" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
+        </div>
+
         
         <template slot="prevButton">prev</template>
         <template slot="nextButton">next</template>
@@ -96,10 +105,10 @@
         </div>
     </transition>
 
-    <div class="hero-caption">
+    <!-- <div class="hero-caption">
         <img src="./static/images/Grab a Bitez.PNG"><br>
         <img src="./static/images/Bitez.PNG">
-    </div>
+    </div> -->
 </header>
 
 <!-- ************************ ABOUT *********************** -->
