@@ -333,12 +333,18 @@
                 mapboxgl.accessToken = 'pk.eyJ1IjoidHJ2bGdhZG1pbiIsImEiOiJja2YzZTFiNXIwMjhkMnpsOHRrczgxazJxIn0.oM0XK7OaNfbHmax5hT-sMg';
 
                 for (var locationIndex = 0; locationIndex < locations.length; locationIndex++) {
-                    var map = new mapboxgl.Map({
-                        container: 'map-' + locationIndex,
-                        style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
-                        center: [locations[locationIndex]['longitude'], locations[locationIndex]['latitude'] ], // starting position [lng, lat]
-                        zoom: 10 // starting zoom
+                    if (!mapboxgl.supported()) {
+                        
+                        alert('Your browser does not support Mapbox GL');
+
+                        } else {
+                            var map = new mapboxgl.Map({
+                            container: 'map-' + locationIndex,
+                            style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
+                            center: [locations[locationIndex]['longitude'], locations[locationIndex]['latitude'] ], // starting position [lng, lat]
+                            zoom: 10 // starting zoom
                     });
+                    }
                 }
             })
         }
