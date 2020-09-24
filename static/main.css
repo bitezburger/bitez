@@ -26,6 +26,11 @@ body {
     background: var(--tan);
 }
 
+/* Prevent horizontal scrolling */
+#homeApp {
+    overflow-x: hidden;
+}
+
 /* Hide Side Menu until Vue is rendered */
 [v-cloak] {
     display: none;
