@@ -31,16 +31,7 @@
 <!-- ******************** HEADER / NAV ******************** -->
 <header id="hero">
 
-    <!-- Carousel -->
-    <!-- <agile class="carousel" :autoplay="true" :autoplay-speed="4500">
-        <div class="slide" v-for="n in 6" :key="n" :class="`slide--${n}`">
-            <h3>{{ n }}</h3>
-        </div>
-        <template slot="prevButton">prev</template>
-    <template slot="nextButton">next</template>
-    </agile> -->
-
-    <agile class="carousel" :autoplay="false" :autoplay-speed="4500" :fade="false">
+    <agile class="carousel" :autoplay="true" :autoplay-speed="3000" :pauseOnHover="false" :speed="500">
         
         <div class="slide">
             <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="close up shot of burger and ingredients"/>
@@ -208,48 +199,6 @@
                 </div>
             </div>
         </div>
-        <div class="button stay-informed-cta">
-            <p>Don't see a city near you?</p>
-            <a href="#sign-up">LEARN MORE</a>
-        </div>
-    </div>
-</section>
-
-<!-- ********************** SIGN UP *********************** -->
-<section id="sign-up">
-    <div class="body-content container">
-        <div>
-            <h2>Stay Informed</h2>
-            <p>We'll notify you when Bitez is coming to your area.</p>
-        </div>
-        <div class="row">
-            <div class="col-10 col-md-6">
-                <img class="stay-informed-img m-auto" src="static/images/stay-informed.jpg">
-            </div>
-
-            <div class="col-10 col-md-6 m-auto">
-                <form>
-                <div class="form-group">
-                    <label for="inputFirstName">First Name</label>
-                    <input type="text" class="form-control" id="inputFirstName">
-
-                    <label for="inputLastName">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName">
-
-                    <label for="inputZipCode">Zip Code</label>
-                    <input type="text" class="form-control" id="inputZipCode">
-
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">By checking this box and clicking “Submit” I agree to receive awesome news about when Bitez is coming to my area.</label>
-                </div>
-                <button type="submit" class="btn btn-primary">SUBMIT</button>
-                </form>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -328,25 +277,19 @@
                 console.log(data);
                 this.locations = data.locations;
             })
-            .then(() => {
-                var locations = this.locations;
-                mapboxgl.accessToken = 'pk.eyJ1IjoidHJ2bGdhZG1pbiIsImEiOiJja2YzZTFiNXIwMjhkMnpsOHRrczgxazJxIn0.oM0XK7OaNfbHmax5hT-sMg';
+            // .then(() => {
+                // var locations = this.locations;
+                // mapboxgl.accessToken = '';
 
-                for (var locationIndex = 0; locationIndex < locations.length; locationIndex++) {
-                    if (!mapboxgl.supported()) {
-                        
-                        alert('Your browser does not support Mapbox GL');
-
-                        } else {
-                            var map = new mapboxgl.Map({
-                            container: 'map-' + locationIndex,
-                            style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
-                            center: [locations[locationIndex]['longitude'], locations[locationIndex]['latitude'] ], // starting position [lng, lat]
-                            zoom: 10 // starting zoom
-                    });
-                    }
-                }
-            })
+                // for (var locationIndex = 0; locationIndex < locations.length; locationIndex++) {
+                //         var map = new mapboxgl.Map({
+                //         container: 'map-' + locationIndex,
+                //         style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
+                //         center: [locations[locationIndex]['longitude'], locations[locationIndex]['latitude'] ], // starting position [lng, lat]
+                //         zoom: 10 // starting zoom
+                //     });
+                // }
+            // })
         }
     },
     watch: {
@@ -360,11 +303,6 @@
         }
     },
     created: function() {
-        var currentTime = new Date();
-        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        var weekday = days[currentTime.getDay()];
-        console.log("The day is: " + weekday);
-        console.log("The time is: " + currentTime.getHours() + " : " + currentTime.getMinutes());
         this.loadLocations();
     }
     })

@@ -9,6 +9,7 @@ COLORS
     #FCFAF9 - white - whitemocha
     #BD0F1E - red - reddish
     #FFEBC2 - yellow - peachy
+    #F9F4EF - tan - tan
 
 Z-Index
     Fixed-Top - 10
@@ -44,6 +45,7 @@ html {
     --whitemocha: #FCFAF9;
     --reddish: #BD0F1E;
     --peachy: #FFEBC2;
+    --tan: #F9F4EF;
 }
 
 .body-content {
@@ -205,31 +207,12 @@ h2 {
 /* Hero
 ------------------------------------*/
 #hero {
-    /* background-image: url('./images/burgerCloseUp.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% 40%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed; */
     display: block;
     position: relative;
     width: 100%;
     height: 100vh;
     min-height: 350px;
 }
-
-/* #hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.30), rgba(0, 0, 0, .15));
-    z-index: 0;
-} */
 
 .hero-caption {
     position: absolute;
@@ -286,6 +269,9 @@ h2 {
 
 .agile__nav-button {
     background: none;
+}
+.agile__nav-button img {
+    width: 50px;
 }
 
 .agile__nav-button--prev {
@@ -351,7 +337,7 @@ h2 {
     border-left: #b19876 solid 12px;
     border-bottom: #c9ad86 solid 12px;
     box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
-    background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, 1));
+    background-image: radial-gradient( circle at left 30%, rgba(34, 34, 34, 0.03), rgba(34, 34, 34, 0.03) 10px, rgba(34, 34, 34, 0.05) 10px, rgba(51, 51, 51, 0.5) 10px, rgba(51, 51, 51, 0.5)), linear-gradient( 215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient( circle at right, #111, rgba(51, 51, 51, .01));
     background-color: #333;
 }
 
@@ -430,8 +416,7 @@ h2 {
 /* Upcoming Locations 
 ------------------------------------*/
 #find-us {
-    background-color: var(--peachy);
-    /* background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
+    background-color: var(--tan);
 }
 
 #find-us h3 {
@@ -441,11 +426,11 @@ h2 {
 
 .location {
     padding: 0px;
-    margin: 15px auto auto auto !important;
+    margin: 15px auto !important;
     position: relative;
     border: 1px solid rgba(235,236,237,.5);
     border-radius: 3px;
-    width: 350px;
+    width: 325px;
     box-shadow: 0 1px 3px rgba(0,0,0,.1);
 
 }
@@ -458,7 +443,7 @@ h2 {
 }
 
 .location-map {
-    height:275px;
+    height:270px;
     background: rgb(225, 225, 225);
 }
 
@@ -506,57 +491,6 @@ h2 {
 .stay-informed-cta {
     text-align: center;
     padding: 20px 0 40px 0;
-}
-
-/* Sign Up
-------------------------------------*/
-
-#sign-up {
-    padding-bottom: 20px;
-    background-color: #ffffff;
-}
-
-#sign-up p {
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.stay-informed-img {
-    padding-right: 50px;
-    width: 500px;
-    display: block;
-}
-
-.form-group label {
-    margin-top: 5px;
-}
-
-.form-control {
-    border: 1px solid var(--reddish);
-}
-
-.form-control:focus {
-    border-color: var(--raincloud);
-}
-
-.btn-primary {
-    text-decoration: none;
-    background-color: var(--reddish);
-    color: var(--whitemocha);
-    padding: 10px 20px 10px 20px;
-    display: inline-block;
-    border-radius: 9px;
-    transition: all .6s ease;
-    border-color: var(--reddish);
-}
-
-.btn-primary:hover {
-    background-color: #F36874;
-    border-color: #F36874;
-}
-
-label {
-    font-family: 'Raleway', sans-serif;
 }
 
 /* Footer
