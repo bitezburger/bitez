@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Food truck delivery service for incredible burgers, and even better experiences.">
+    <meta name="author" content="M&G Design, LLC.">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <title>Bitez | Gallery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="./static/main.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
+
+</head>
+
+<body>
+
+<div id="galleryApp">
+<!-- ******************** HEADER / NAV ******************** -->
+<header id="hero">
+
+    <img style="height:50vh;" class="slide-image" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
+
+    <a class="navbar-brand" href="index.html">
+        <img id="nav-logo" src="./static/images/BitezLogo.svg">
+    </a>
+
+    <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
+        <div>
+            <!-- Mobile Hamburger Icon -->
+            <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
+                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon">
+            </div>
+            <div class="collapse navbar-collapse" id="">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAVIGATION BAR -->
+    <transition name="slide">
+        <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
+            <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
+            <div class="navigation-links">
+                <a href="index.html" @click="sideMenu=false">Home</a>
+                <a href="#" @click="sideMenu=false">Gallery</a>   
+                <div class="navigation-social-media">
+                    <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
+                    <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
+                    <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
+                </div>
+            </div>
+        </div>
+    </transition>
+</header>
+
+<!-- *********************** CONTENT *********************** -->
+
+<section style="min-height:1000px;">
+
+    <div class="container">
+
+        <main style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));row-gap:10px;column-gap:10px;">
+            <div v-for="i in 12" style="background-color: rgba(31, 146, 218, 0.571);height:300px;"></div>
+        </main>
+
+    </div>
+
+</section>
+
+<!-- *********************** FOOTER *********************** -->
+
+<footer id="footer">
+    <div class="footer-icon">
+        <img src="./static/images/BitezTruck.png">
+    </div>
+    <div class="container">
+        <div class="row footer-info">
+            <div class="col-12 col-md-6">
+                <h3>CONTACT US</h3>
+                <div class="footer-phone">
+                    <div>
+                        <img src="./static/images/email-icon.png" alt="an envelope icon" width="20">
+                    </div>
+                    <a class="text-reset" href="mailto:bitezburger@yahoo.com">bitezburger@yahoo.com</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 footer-social">
+                <h3>FOLLOW US</h3>
+                <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
+                <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
+                <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
+            </div>
+        </div>
+    </div>
+    <p class="copyright-info">Copyright &copy;2020 Bitez. All rights reserved.</p>
+</footer>
+
+
+</div>
+
+<!-- Vue Insert -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+    var app = new Vue({
+    el: '#galleryApp',
+    data: {
+        sideMenu: false,
+    },
+    methods: {
+    },
+    watch: {
+        isModalVisible: function() {
+            if(this.sideMenu) {
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+            } else {
+                document.documentElement.style.overflow = 'auto'
+            }
+        }
+    },
+    created: function() {
+    },
+    })
+</script>
+
+<!-- Vanilla -->
+<script>
+    var myNav = document.getElementById('nav');
+    var logo = document.getElementById('nav-logo');
+    var heightOfNav = 75;
+    window.onscroll = function () { 
+        "use strict";
+        if (document.body.scrollTop >= heightOfNav || document.documentElement.scrollTop >= heightOfNav ) {
+            logo.classList.add('navbar-img-bg-scrolled');
+        } 
+        else {
+            logo.classList.remove('navbar-img-bg-scrolled');
+        }
+
+        if (document.body.scrollTop >= heightOfNav + 20 || document.documentElement.scrollTop >= heightOfNav + 20 ) {
+            myNav.classList.add("bg-dark");
+        } 
+        else {
+            myNav.classList.remove("bg-dark");
+        }
+    };
+</script>
+
+</body>
+
+</html>
