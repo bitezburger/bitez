@@ -132,8 +132,8 @@
             <div class="menu-items">
                 <div class="container" v-for="item in burgerMenuItems">
                     <div class="row menu-row">
-                        <h4 class="col-8 col-md-10">{{ item.name }}</h4>
-                        <p class="col-4 col-md-2">{{ item.price }}</p>
+                        <h4 class="col-8 col-md-9">{{ item.name }}</h4>
+                        <p class="col-4 col-md-3">{{ item.price }} | {{ item.priceDouble }}</p>
                     </div>
                     <hr class="dotted">
                     <p>
@@ -258,15 +258,15 @@
             {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},
         ],
         burgerMenuItems: [
-            {'name': 'The Classic', 'price': '$6', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
-            {'name': 'The Original Hamburger', 'price': '$4.50', 'description': 'American beef patty spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
-            {'name': 'The Original Cheeseburger', 'price': '$5', 'description': 'American beef patty and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
-            {'name': 'The Mushroom Swiss', 'price': '$6.75', 'description': 'American beef patty, mushrooms and Swiss cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
-            {'name': 'The Protein', 'price': '$5.50', 'description': 'American beef patty, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
-            {'name': 'The Vegetarian', 'price': '$4', 'description': 'Mushroom, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped with a soft Hawaiian bun'},
+            {'name': 'The Classic', 'price': '$6.00', 'priceDouble': '$7.50', 'description': 'American beef patty, crisp lettuce, fresh tomato, onions and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
+            {'name': 'The Original Hamburger', 'price': '$4.50', 'priceDouble': '$7.50', 'description': 'American beef patty spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
+            {'name': 'The Original Cheeseburger', 'price': '$5.00', 'priceDouble': '$7.50', 'description': 'American beef patty and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
+            {'name': 'The Mushroom Swiss', 'price': '$6.75', 'priceDouble': '$7.50', 'description': 'American beef patty, mushrooms and Swiss cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
+            {'name': 'The Protein', 'price': '$5.50', 'priceDouble': '$7.50', 'description': 'American beef patty, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped on a soft Hawaiian bun'},
+            {'name': 'The Vegetarian', 'price': '$4.00', 'priceDouble': '$7.50', 'description': 'Mushroom, crisp lettuce, fresh tomato and cheddar cheese spread with our special Bitez sauce, topped with a soft Hawaiian bun'},
         ],
         sideMenuItems: [
-            {'name': 'French Fries', 'price': '$6', 'description': 'Shoe string french fries coated in our specially made Bitez seasoning'},
+            {'name': 'French Fries', 'price': '$6.00', 'description': 'Shoe string french fries coated in our specially made Bitez seasoning'},
             {'name': 'Cinnabitez', 'price': '$4.50', 'description': 'Fluffy, soft fried dough rolled and coated in cinnamon'},
         ],
         sideMenu: false,

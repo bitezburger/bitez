@@ -672,6 +672,9 @@ a:link {
     .hero-caption img {
         width: 250px;
     }
+    .gallery-container {
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 551px) {
