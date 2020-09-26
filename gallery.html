@@ -15,7 +15,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Custom styles -->
-    <link href="./static/main.css" rel="stylesheet">
+    <link href="./static/gallery.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
@@ -28,13 +28,9 @@
 
 <div id="galleryApp">
 <!-- ******************** HEADER / NAV ******************** -->
-<header id="hero">
+<header id="banner">
 
-    <img style="height:50vh;" class="slide-image" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
-
-    <a class="navbar-brand" href="index.html">
-        <img id="nav-logo" src="./static/images/BitezLogo.svg">
-    </a>
+    <img id="banner-image" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
 
     <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
         <div>
@@ -49,7 +45,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: red;">Gallery</a>
+                        <a class="nav-link" href="#">Gallery</a>
                     </li>
                     <div class="nav-item">
                         <a  class="nav-link" href="index.html#menu">Menu</a>
@@ -79,15 +75,37 @@
 
 <!-- *********************** CONTENT *********************** -->
 
-<section style="min-height:1000px;">
+<section class="col-sm-12 col-md-11 m-auto">
 
-    <div class="container">
+    <transition name="fade">
+        <div id="gallery-wrapper" v-if="showGalleryModal & largeScreen">
 
-        <main style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));row-gap:10px;column-gap:10px;">
-            <div v-for="i in 12" style="background-color: rgba(31, 146, 218, 0.571);height:300px;"></div>
-        </main>
+            <div @click="hideGalleryModal" id="gallery-backdrop"></div>
+            <button type="button" class="gallery-close" @click="hideGalleryModal"></button>
 
-    </div>
+            <vue-litebox id="gallery-modal" :items="images" :startAt="0">
+
+                <button type="button" slot="close" style="display:none;"></button>
+
+                <button id="prevButton" type="button" slot="prev" aria-label="Previous item" slot-scope="{ prevProps, prevEvents }" v-bind="prevProps" v-on="prevEvents">Previous</button>
+
+                <button id="nextButton" type="button" slot="next" aria-label="Next item" slot-scope="{ nextProps, nextEvents }" v-bind="nextProps" v-on="nextEvents">Next</button>
+
+                <figcaption slot="caption" slot-scope="{ captionProps, currentItem, currentItemIndex, totalItems }" 
+                    v-bind="captionProps">
+                    <div class="vlb-caption-title" v-if="currentItem.title">{{currentItem.title}}</div>
+                    <div class="vlb-caption-count">{{currentItemIndex + 1}}/{{totalItems}}</div>
+                </figcaption>
+                
+            </vue-litebox>
+        </div>
+    </transition>
+
+    <main id="gallery-grid">
+        <div v-for="(item, index) in images" :key="index" class="gallery-item" @click="showGalleryModal=true">
+            <img :src="item.src" :alt="item.title">
+        </div>
+    </main>
 
 </section>
 
@@ -125,25 +143,48 @@
 <!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+<!-- Lightbox Component -->
+<script src="https://unpkg.com/vue-litebox"></script>
+
 <script>
     var app = new Vue({
     el: '#galleryApp',
+    components: { 
+        VueLightbox: VueLitebox,
+    },
     data: {
         sideMenu: false,
+        showGalleryModal: false,
+        largeScreen: true,
+        images: [
+            {src : './static/images/burger-with-logo.jpg', title : "Burger with Logo"}, 
+            {src : './static/images/burger-closeup.jpg', title : "Burger up close"},
+            {src: 'https://images.unsplash.com/photo-1572198393739-2e5005d54924?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80'},
+            {src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
+            {src: 'https://images.unsplash.com/photo-1555936337-1ec53172d6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=888&q=80'},
+            {src: 'https://images.unsplash.com/photo-1600811994852-d5ef2639da2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80'},
+            {src: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80'}
+        ]
     },
     methods: {
+        hideGalleryModal() {
+            this.showGalleryModal = false;
+        }
     },
     watch: {
-        isModalVisible: function() {
-            if(this.sideMenu) {
+        showGalleryModal: function() {
+            if(this.showGalleryModal) {
                 document.documentElement.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-            } else {
-                document.documentElement.style.overflow = 'auto'
+                return
             }
+            
+            document.documentElement.style.overflow = 'auto';
         }
     },
     created: function() {
+        if (window.innerWidth < 551) {
+            this.largeScreen = false;
+        }
     },
     })
 </script>
@@ -151,16 +192,9 @@
 <!-- Vanilla -->
 <script>
     var myNav = document.getElementById('nav');
-    var logo = document.getElementById('nav-logo');
     var heightOfNav = 75;
     window.onscroll = function () { 
         "use strict";
-        if (document.body.scrollTop >= heightOfNav || document.documentElement.scrollTop >= heightOfNav ) {
-            logo.classList.add('navbar-img-bg-scrolled');
-        } 
-        else {
-            logo.classList.remove('navbar-img-bg-scrolled');
-        }
 
         if (document.body.scrollTop >= heightOfNav + 20 || document.documentElement.scrollTop >= heightOfNav + 20 ) {
             myNav.classList.add("bg-dark");

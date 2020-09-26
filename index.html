@@ -38,7 +38,7 @@
         
         <div class="slide">
             <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="close up shot of burger and ingredients"/>
-            <div class="hero-caption">
+            <div class="d-none d-md-block hero-caption">
                 <img src="./static/images/Grab a Bitez.PNG"><br>
                 <img src="./static/images/Bitez.PNG">
             </div>
@@ -90,7 +90,7 @@
                 <a href="#home" @click="sideMenu=false">Home</a>
                 <a href="#about" @click="sideMenu=false">About</a>
                 <a href="#menu" @click="sideMenu=false">Menu</a>
-                <a href="#find-us" @click="sideMenu=false">Find Us</a>   
+                <a href="gallery.html">Gallery</a>   
                 <div class="navigation-social-media">
                     <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
                     <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
@@ -116,8 +116,8 @@
 </section>
 
 <!-- ************************ MENU ************************ -->
-<section id="blackboard" data-aos="flip-down" data-aos-offset="300">
-    <div id="menu" class="body-content">
+<section id="blackboard">
+    <div id="menu" class="body-content" data-aos="flip-down" data-aos-offset="300" data-aos-duration="600">
         <h2>Menu</h2>
 
         <!--Hamburgers-->
@@ -170,30 +170,30 @@
 
 <!-- ********************** GALLERY *********************** -->
 <section id="gallery">
-    <div class="body-content container">
+    <div class="body-content">
 
         <h1>
             Check Out Our Gallery
         </h1>
 
-        <div class="gallery-container row">
+        <div class="gallery-container row col-md-12 m-auto">
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="100">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="150">
                     <img src="./static/images/hamburger-sketch.png">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="150">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200">
                     <img src="./static/images/burger-closeup.jpg">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250">
                     <img src="./static/images/burger-lineup.jpg">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300">
                     <img src="./static/images/burger-with-logo.jpg">
                 </div>
             </div>
@@ -286,13 +286,13 @@
         }
     },
     watch: {
-        isModalVisible: function() {
+        sideMenu: function() {
             if(this.sideMenu) {
                 document.documentElement.style.overflow = 'hidden';
-                document.body.style.position = 'fixed';
-            } else {
-                document.documentElement.style.overflow = 'auto'
+                return
             }
+            
+            document.documentElement.style.overflow = 'auto';
         }
     },
     created: function() {
