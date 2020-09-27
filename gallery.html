@@ -77,8 +77,8 @@
 
 <section class="col-sm-12 col-md-11 m-auto">
 
-    <transition name="fade">
-        <div id="gallery-wrapper" v-if="showGalleryModal & largeScreen">
+    <transition name="fade" v-if="showGalleryModal">
+        <div id="gallery-wrapper">
 
             <div @click="hideGalleryModal" id="gallery-backdrop"></div>
             <button type="button" class="gallery-close" @click="hideGalleryModal"></button>
@@ -155,7 +155,6 @@
     data: {
         sideMenu: false,
         showGalleryModal: false,
-        largeScreen: true,
         images: [
             {src : './static/images/burger-with-logo.jpg', title : "Burger with Logo"}, 
             {src : './static/images/burger-closeup.jpg', title : "Burger up close"},
@@ -179,11 +178,6 @@
             }
             
             document.documentElement.style.overflow = 'auto';
-        }
-    },
-    created: function() {
-        if (window.innerWidth < 551) {
-            this.largeScreen = false;
         }
     },
     })
