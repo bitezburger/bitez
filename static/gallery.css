@@ -223,7 +223,6 @@ a:link {
 #banner {
     width: 100vw;
     height: 350px;
-    border-radius: 0 0 25% 25% / 5%;
     overflow: hidden;
     position: relative;
 }
@@ -259,7 +258,10 @@ a:link {
 }
 
 .gallery-item {
-    background-color: var(--raincloud);
+    /* background-color: var(--raincloud); */
+    background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+    animation: skeletonLoad 1.6s infinite linear;
+    background-size: 600px;
     cursor: pointer;
 }
 
@@ -458,6 +460,15 @@ a:link {
         transform: translateX(0px);
     }
 }
+
+@keyframes skeletonLoad {
+    0% {
+      background-position: -32px;
+    }
+    40%, 100% {
+      background-position: 208px;
+    }
+  }
 
 
 /* Media Queries 
