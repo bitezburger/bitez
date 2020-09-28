@@ -670,6 +670,10 @@ a:link {
 }
 
 @media screen and (max-width: 551px) {
+    #hero {
+        height: 95vh;
+    }
+
     .stay-informed-img {
         width: 275px;
         padding-right: 0px;
