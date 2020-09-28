@@ -63,11 +63,6 @@ body {
     margin: auto;
 }
 
-.body-content h2 {
-    padding-top: 25px;
-    margin-bottom: 0;
-}
-
 h2 {
     font-family: 'Courier Prime', monospace;
     font-size: 2.8em;
@@ -235,9 +230,8 @@ a:link {
 
 .hero-caption {
     position: absolute;
-    left: 15%;
-    right: 15%;
-    top: 50%;
+    right: 2%;
+    top: 90%;
     bottom: unset;
     transform: translateY(-50%);
     color: var(--whitemocha);
@@ -522,9 +516,8 @@ a:link {
     background: linear-gradient(168deg, var(--tan) 53%, #bd2130f7 0);
 }
 
-#gallery h1 {
+#gallery h2 {
     text-align: center;
-    font-size: 34px;
     padding-top: 40px;
     margin-bottom: 30px;
 }
@@ -532,6 +525,7 @@ a:link {
 .gallery-container {
     flex-wrap: nowrap;
     overflow: scroll;
+    justify-content: center;
 }
 
 .gallery-item {
@@ -664,6 +658,10 @@ a:link {
 @media screen and (max-width: 900px) {
     .stay-informed-img {
         width: 400px;
+    }
+
+    .gallery-container {
+        justify-content: unset;
     }
 }
 
