@@ -17,6 +17,9 @@
     <!-- Custom styles -->
     <link href="./static/gallery.css" rel="stylesheet">
 
+    <!-- AOS styles -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
     <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
@@ -112,7 +115,7 @@
 <!-- *********************** FOOTER *********************** -->
 
 <footer id="footer">
-    <div class="footer-icon">
+    <div class="footer-icon" data-aos="fade-left" data-aos-offset="200">
         <img src="./static/images/BitezTruck.png">
     </div>
     <div class="container">
@@ -139,6 +142,12 @@
 
 
 </div>
+
+<!-- AOS insert -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 <!-- Vue Insert -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
