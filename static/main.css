@@ -696,6 +696,10 @@ a:link {
         margin-top: 30px;
     }
 
+    #gallery {
+        height: 625px;
+    }
+
     #about {
         height: 90vh;
     }
