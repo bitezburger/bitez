@@ -36,6 +36,10 @@ body {
     display: none;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit; /*doesn't let padding or margin change size*/
+}
+
 * {
     -ms-overflow-style: none;
     font-family: 'Raleway', sans-serif;
@@ -255,7 +259,7 @@ a:link {
 }
 
 .gallery-item {
-    background-color: rgba(31, 146, 218, 0.571);
+    background-color: var(--raincloud);
     cursor: pointer;
 }
 

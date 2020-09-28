@@ -83,7 +83,7 @@
             <div @click="hideGalleryModal" id="gallery-backdrop"></div>
             <button type="button" class="gallery-close" @click="hideGalleryModal"></button>
 
-            <vue-litebox id="gallery-modal" :items="images" :startAt="0">
+            <vue-litebox id="gallery-modal" :items="images" :start-at="galleryStartIndex">
 
                 <button type="button" slot="close" style="display:none;"></button>
 
@@ -102,7 +102,7 @@
     </transition>
 
     <main id="gallery-grid">
-        <div v-for="(item, index) in images" :key="index" class="gallery-item" @click="showGalleryModal=true">
+        <div v-for="(item, index) in images" :key="index" class="gallery-item" @click="galleryStartIndex=index; showGalleryModal=true">
             <img :src="item.src" :alt="item.title">
         </div>
     </main>
@@ -154,15 +154,26 @@
     },
     data: {
         sideMenu: false,
+        galleryStartIndex: 0,
         showGalleryModal: false,
         images: [
             {src : './static/images/burger-with-logo.jpg', title : "Burger with Logo"}, 
-            {src : './static/images/burger-closeup.jpg', title : "Burger up close"},
-            {src: 'https://images.unsplash.com/photo-1572198393739-2e5005d54924?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80'},
-            {src: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'},
-            {src: 'https://images.unsplash.com/photo-1555936337-1ec53172d6f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=888&q=80'},
-            {src: 'https://images.unsplash.com/photo-1600811994852-d5ef2639da2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=890&q=80'},
-            {src: 'https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80'}
+            {src : './static/gallery imgs/119026309_649536715672806_624433735375111818_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119083420_948616828948912_3401753671511113976_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119087480_621574558724572_2955523686414429057_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119099493_340504563975761_2479934795741991016_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119145555_668312290743491_7978896490497124756_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119147499_244723046837541_5417983480143514608_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119151083_1200306207006389_3137113520784527839_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119197745_710553019805434_1517400064757060037_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119198908_342969087043786_2828581134393682906_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119207369_337698684254669_3033016878767305777_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg', title : "Burger up close"},
+            {src : './static/gallery imgs/119480620_366116137884281_5757548289912986230_n.jpg', title : "Burger up close"},
         ]
     },
     methods: {
