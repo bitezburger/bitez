@@ -332,12 +332,20 @@ a:link {
 }
 
 #prevButton {
-    margin-left: -50px;
+    margin-left: -125px;
+    transform: rotate(-90deg);
 }
 
 #nextButton {
     float: right;
-    margin-right: -50px;
+    margin-right: -125px;
+    transform: rotate(90deg);
+}
+
+#prevButton, #nextButton {
+    border: none;
+    background-color: transparent;
+    width: 85px;
 }
 
 /* Override Lightbox styles */
@@ -475,10 +483,19 @@ a:link {
 /* Media Queries 
 ------------------------------------*/
 
+<<<<<<< HEAD
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.2rem;
     }
+=======
+@media (max-width: 1200px) {
+    #prevButton {
+        margin-left: -100px;
+    }
+    #nextButton {
+        margin-right: -100px;
+>>>>>>> 3a5e6a05fe6e31420fb8a317b2086c7f0ed63db4
 }
 
 @media screen and (max-width: 900px) {
@@ -489,6 +506,13 @@ a:link {
         grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
         grid-auto-rows: 200px;
     }
+    #prevButton {
+        margin-left: -80px;
+        width: 75px;
+    }
+    #nextButton {
+        margin-right: -80px;
+        width: 75px;
 }
 
 @media screen and (max-width: 551px) {

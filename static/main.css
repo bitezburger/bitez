@@ -231,9 +231,7 @@ a:link {
 .hero-caption {
     position: absolute;
     right: 2%;
-    top: 90%;
-    bottom: unset;
-    transform: translateY(-50%);
+    bottom: 4%;
     color: var(--whitemocha);
     text-align: center;
     z-index:1;
