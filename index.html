@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Food truck delivery service for incredible burgers, and even better experiences.">
@@ -39,8 +38,8 @@
         <div class="slide">
             <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="A close up shot of a Bitez burger surrounded by ingredients"/>
             <div class="d-none d-md-block hero-caption">
-                <img src="./static/images/Grab a Bitez.PNG">
-                <img src="./static/images/Bitez.PNG">
+                <img src="./static/images/Grab a Bitez.PNG" alt="Text display grab a bite.">
+                <img src="./static/images/Bitez.PNG" alt="Cartoon drawing of the word Bitez">
             </div>
         </div>
 
@@ -49,31 +48,31 @@
         </div>
 
         <div class="slide">
-            <img class="slide-image" src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg" alt="A close up shot of a Bitez bacon burger surrounded by ingredients">
+            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg" alt="A close up shot of a Bitez bacon burger surrounded by ingredients">
         </div>
 
         <div class="slide">
-            <img class="slide-image" src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg" alt="A close up shot of a Bitez mushroom and swiss burger">
+            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg" alt="A close up shot of a Bitez mushroom and swiss burger">
         </div>
 
         <div class="slide">
-            <img class="slide-image" src="./static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg" alt="A close up shot of a Cinnabitez">
+            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg" alt="A close up shot of a Cinnabitez">
         </div>
 
         
-        <template slot="prevButton"><img src="./static/images/hero-arrow-cr.png"></template>
-        <template slot="nextButton"><img src="./static/images/hero-arrow-cr.png"></template>
+        <template slot="prevButton"><img src="./static/images/hero-arrow-cr.png" alt="Left facing button"></template>
+        <template slot="nextButton"><img src="./static/images/hero-arrow-cr.png" alt="Right facing button"></template>
     </agile>
 
     <a class="navbar-brand" href="index.html">
-        <img id="nav-logo" src="./static/images/BitezLogo.svg">
+        <img id="nav-logo" src="./static/images/BitezLogo.svg" alt="Cartoon character eating over the word Bitez.">
     </a>
 
     <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
         <div>
             <!-- Mobile Hamburger Icon -->
             <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
-                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon">
+                <img src="./static/images/hamburger-menu.png" alt="Hamburger cartoon icon">
             </div>
 
             <!-- Desktop Nav -->            
@@ -193,21 +192,21 @@
         <div class="gallery-container row col-md-11 m-auto">
             <div>
                 <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200">
-                    <img src="./static/images/burger-closeup.jpg">
+                    <img src="./static/images/burger-closeup.jpg" alt="Close up picture of a burger.">
                 </div>
             </div>
             <div>
                 <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="150">
-                    <img src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg">
+                    <img src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg" alt="Close up picture of a bacon burger.">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Four burgers lined up.">
                     <img src="./static/images/burger-lineup.jpg">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300" alt="Close up picture of a burger.">
                     <img src="./static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg">
                 </div>
             </div>
@@ -223,7 +222,7 @@
 
 <footer id="footer">
     <div class="footer-icon" data-aos="fade-left" data-aos-offset="200">
-        <img src="./static/images/BitezTruck.png">
+        <img src="./static/images/BitezTruck.png" alt="Cartoon character driving a truck.">
     </div>
     <div class="container">
         <div class="row footer-info">
@@ -257,7 +256,8 @@
 </script>
 
 <!-- Vue Insert -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 <script src="https://unpkg.com/vue-agile"></script>
 
 <script>
