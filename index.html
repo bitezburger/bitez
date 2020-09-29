@@ -37,7 +37,7 @@
     <agile class="carousel" :throttle-delay="0" timing="ease-in" :autoplay="true" :autoplay-speed="4000" :pause-on-hover="false" :speed="600">
         
         <div class="slide">
-            <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="close up shot of burger and ingredients"/>
+            <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="A close up shot of a Bitez burger surrounded by ingredients"/>
             <div class="d-none d-md-block hero-caption">
                 <img src="./static/images/Grab a Bitez.PNG">
                 <img src="./static/images/Bitez.PNG">
@@ -45,7 +45,19 @@
         </div>
 
         <div class="slide">
-            <img class="slide-image" src="./static/images/burger-lineup.jpg" alt="line up of four types of burgers">
+            <img class="slide-image" src="./static/images/burger-lineup.jpg" alt="A line up of four types of Bitez burgers">
+        </div>
+
+        <div class="slide">
+            <img class="slide-image" src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg" alt="A close up shot of a Bitez bacon burger surrounded by ingredients">
+        </div>
+
+        <div class="slide">
+            <img class="slide-image" src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg" alt="A close up shot of a Bitez mushroom and swiss burger">
+        </div>
+
+        <div class="slide">
+            <img class="slide-image" src="./static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg" alt="A close up shot of a Cinnabitez">
         </div>
 
         
@@ -63,6 +75,8 @@
             <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
                 <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon">
             </div>
+
+            <!-- Desktop Nav -->            
             <div class="collapse navbar-collapse" id="">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -90,7 +104,7 @@
                 <a href="#home" @click="sideMenu=false">Home</a>
                 <a href="#about" @click="sideMenu=false">About</a>
                 <a href="#menu" @click="sideMenu=false">Menu</a>
-                <a href="#gallery">Gallery</a>   
+                <a href="#gallery" @click="sideMenu=false">Gallery</a>   
                 <div class="navigation-social-media">
                     <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
                     <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
