@@ -102,7 +102,7 @@
 
     <main id="gallery-grid">
         <div v-for="(item, index) in images" :key="index" class="gallery-item" @click="galleryStartIndex=index; showGalleryModal=true">
-            <img :src="item.src" :alt="item.title" loading="lazy">
+            <img class="js-lazy-image" :src="item.src" :alt="item.title" loading="lazy">
         </div>
     </main>
 
@@ -199,7 +199,7 @@
     const images = document.querySelectorAll('.js-lazy-image');
     const config = {
         // If the image gets within 50px in the Y axis, start the download.
-        rootMargin: '100px 0px',
+        rootMargin: '150px 0px',
         threshold: 0.01
     };
 
