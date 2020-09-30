@@ -79,16 +79,16 @@
             <div class="collapse navbar-collapse" id="">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#hero" aria="Links to Bitez burger landing page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" aria="Links to Bitez burger about section">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu">Menu</a>
+                        <a class="nav-link" href="#menu" aria="Links to Bitez burger menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="#gallery" aria="Links to Bitez burger gallery section">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -100,10 +100,10 @@
         <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
             <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
             <div class="navigation-links">
-                <a href="#home" @click="sideMenu=false">Home</a>
-                <a href="#about" @click="sideMenu=false">About</a>
-                <a href="#menu" @click="sideMenu=false">Menu</a>
-                <a href="#gallery" @click="sideMenu=false">Gallery</a>   
+                <a href="#hero" @click="sideMenu=false" aria="Links to Bitez burger landign page">Home</a>
+                <a href="#about" @click="sideMenu=false" aria="Links to Bitez burger about section">About</a>
+                <a href="#menu" @click="sideMenu=false" aria="Links to Bitez burger menu">Menu</a>
+                <a href="#gallery" @click="sideMenu=false" aria="links to Bitez burger gallery section">Gallery</a>   
                 <div class="navigation-social-media">
                     <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
                     <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
@@ -192,27 +192,27 @@
         <div class="gallery-container row col-md-11 m-auto">
             <div>
                 <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200">
-                    <img src="./static/images/burger-closeup.jpg" alt="Close up picture of a burger.">
+                    <img src="./static/images/burger-closeup.jpg" alt="Close up picture of a Bitez mushroom swiss burger">
                 </div>
             </div>
             <div>
                 <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="150">
-                    <img src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg" alt="Close up picture of a bacon burger.">
+                    <img src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg" alt="Close up picture of a Bitez bacon burger">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Four burgers lined up.">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Four different Bitez burgers lined up">
                     <img src="./static/images/burger-lineup.jpg">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300" alt="Close up picture of a burger.">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300" alt="Close up picture of a Bitez classic burger.">
                     <img src="./static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg">
                 </div>
             </div>
         </div>
 
-        <a class="gallery-cta" href="gallery.html">See More</a>
+        <a class="gallery-cta" href="gallery.html" aria="Links to the Bitez burger gallery page">See More</a>
         
     </div>
 </section>
