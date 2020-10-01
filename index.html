@@ -33,7 +33,7 @@
 <!-- ******************** HEADER / NAV ******************** -->
 <header id="hero">
 
-    <agile class="carousel" :throttle-delay="0" timing="ease-in" :autoplay="true" :autoplay-speed="4000" :pause-on-hover="false" :speed="600">
+    <agile id="hero-carousel" class="carousel" :throttle-delay="0" timing="ease-in" :autoplay="true" :autoplay-speed="4000" :pause-on-hover="false" :speed="600">
         
         <div class="slide">
             <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="A close up shot of a Bitez burger surrounded by ingredients"/>
@@ -191,7 +191,7 @@
 
         <div class="gallery-container row col-md-11 m-auto">
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="100">
                     <img src="./static/images/burger-closeup.jpg" alt="Close up picture of a burger.">
                 </div>
             </div>
@@ -201,12 +201,12 @@
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Four burgers lined up.">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200" alt="Four burgers lined up.">
                     <img src="./static/images/burger-lineup.jpg">
                 </div>
             </div>
             <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="300" alt="Close up picture of a burger.">
+                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Close up picture of a burger.">
                     <img src="./static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg">
                 </div>
             </div>
@@ -217,6 +217,11 @@
     </div>
 </section>
 
+
+<!-- *********************** BOOKINGS *********************** -->
+<!-- <section>
+    <a target="_top" style=" background-color: #BF003F; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; " href="https://square.site/book/LJ6585XEGGV3H/bitez-burger" rel="nofollow">Book an Appointment</a>
+</section> -->
 
 <!-- *********************** FOOTER *********************** -->
 
@@ -321,6 +326,7 @@
 
 <!-- Vanilla -->
 <script>
+
     var myNav = document.getElementById('nav');
     var logo = document.getElementById('nav-logo');
     var heightOfNav = 75;
