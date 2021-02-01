@@ -640,16 +640,15 @@ width: 10px;
     display: inline;
 }
 
-.footer-phone {
-    margin-bottom: 0px;
+.footer-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 70%;
     text-align: left;
-    margin: auto;
+    margin: 5px auto 0 auto;
 }
 
-.footer-phone div {
+.footer-grid div {
     text-align: right;
     padding-right: 20px;
 }
@@ -799,7 +798,7 @@ width: 10px;
     .footer-social {
         padding-top: 30px;
     }
-    .copyright-info {
+    .address-info, .copyright-info {
         font-size: 12px;
     }
   }
