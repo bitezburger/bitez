@@ -372,9 +372,9 @@ width: 10px;
     left: 50%;
     transform: translate(-50%, -50%);
     border: white 2px solid;
-    padding: 6% 5%;
+    padding: 5% 5%;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.5em;
     letter-spacing: 2px;
     line-height: 1.9em;
     background: #cf3a42;
@@ -382,7 +382,7 @@ width: 10px;
 }
 
 .attract {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: bolder;
 }
 
@@ -437,11 +437,11 @@ width: 10px;
 .menu-items {
     width: 88%;
     margin-left: 5%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .menu-items h4 {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 .menu-items p {
@@ -463,12 +463,18 @@ width: 10px;
 
 #menu h2 {
     color: var(--whitemocha);
+    font-weight: bolder;
     margin-bottom: 25px;
+    font-size: 4.5em;
+}
+
+#menu h3 {
+    font-size: 2.5em;
 }
 
 #menu img {
     margin-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .menu-row p {
@@ -731,6 +737,14 @@ width: 10px;
         width: 250px;
     }
 
+    .menu-items {
+        font-size: 16px;
+    }
+
+    #menu h2 {
+        font-size: 3em;
+    }
+
     .gallery-container {
         justify-content: unset;
     }
@@ -794,6 +808,9 @@ width: 10px;
     .location {
         width: 90%;
         margin: 25px auto auto auto;
+    }
+    #footer {
+        margin-top: -45px;
     }
     .footer-social {
         padding-top: 30px;
