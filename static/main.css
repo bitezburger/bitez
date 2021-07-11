@@ -461,7 +461,6 @@ width: 10px;
 }
 
 .specialItem .price {
-    /* font-size: 2.3em; */
     text-align: left;
 }
 
@@ -796,6 +795,10 @@ width: 10px;
         "specialItem"
         "hamburgers"
         "extras";
+    }
+
+    .hamburgers {
+        margin-bottom: 10px;
     }
 
     .menu-items, .specialItem {
