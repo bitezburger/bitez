@@ -416,8 +416,68 @@ width: 10px;
     text-align: center;
 }
 
+#menu h2 {
+    color: var(--whitemocha);
+    margin-bottom: 60px;
+    font-size: 4.5em;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "hamburgers specialItem"
+    "hamburgers extras";
+    column-gap: 50px;
+}
+
 .hamburgers {
     margin-bottom: 50px;
+    grid-area: hamburgers;
+}
+
+.specialItem {
+    grid-area: specialItem;
+    column-gap: 20px;
+    font-size: 20px;
+    border-style: solid;
+    border-color: var(--reddish);
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.specialItem > div {
+    align-self: center;
+}
+
+.specialItem h3 {
+    font-size: 2em !important;
+}
+
+.specialItem .description {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.specialItem .price {
+    /* font-size: 2.3em; */
+    text-align: left;
+}
+
+.specialItem ul {
+    padding-left: 0;
+}
+
+.specialItem ul li {
+    list-style: none;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2em;
+}
+
+.extras {
+    grid-area: extras;
 }
 
 .food-description {
@@ -459,13 +519,6 @@ width: 10px;
 
 #menu img, #menu h3 {
     display: inline;
-}
-
-#menu h2 {
-    color: var(--whitemocha);
-    font-weight: bolder;
-    margin-bottom: 25px;
-    font-size: 4.5em;
 }
 
 #menu h3 {
@@ -737,12 +790,21 @@ width: 10px;
         width: 250px;
     }
 
-    .menu-items {
+    .menu-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "specialItem"
+        "hamburgers"
+        "extras";
+    }
+
+    .menu-items, .specialItem {
         font-size: 16px;
     }
 
     #menu h2 {
         font-size: 3em;
+        margin-bottom: 25px;
     }
 
     .gallery-container {

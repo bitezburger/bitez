@@ -54,9 +54,9 @@
             <img loading="lazy" class="slide-image" src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg" alt="A close up shot of a Bitez mushroom and swiss burger">
         </div>
 
-        <div class="slide">
+        <!-- <div class="slide">
             <img loading="lazy" class="slide-image" src="./static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg" alt="A close up shot of a Cinnabitez">
-        </div>
+        </div> -->
 
         
         <template slot="prevButton"><img src="./static/images/hero-arrow-cr.png" alt="Left facing button"></template>
@@ -130,50 +130,77 @@
 <!-- ************************ MENU ************************ -->
 <section id="blackboard">
     <div id="menu" class="body-content" data-aos="flip-down" data-aos-offset="300" data-aos-duration="600">
-        <h2>Menu</h2>
+        <h2>MENU</h2>
 
-        <!--Hamburgers-->
-        <div class="hamburgers">
-            <div class="food-description">
-                <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="45">
-                <h3>Bitez Burgers</h3>
-                <p>
-                    Make it a double burger, add $1.
-                </p>
-            </div>
-            <div class="menu-items">
-                <div class="container" v-for="item in burgerMenuItems">
-                    <div class="row menu-row">
-                        <h4 class="col-8 col-md-9">{{ item.name }}</h4>
-                        <p class="col-4 col-md-3">{{ item.price }}{{ item.priceDouble }}</p>
-                    </div>
-                    <hr class="dotted">
+        <div class="menu-container">
+            <!--Hamburgers-->
+            <div class="hamburgers">
+                <div class="food-description">
+                    <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="45">
+                    <h3>Burgers</h3>
                     <p>
-                        {{ item.description }}
+                        Make it a double burger, add $1.
                     </p>
                 </div>
-            </div>
-        </div>
-
-        <!--French Fires-->
-        <div class="french-fries">
-            <div class="food-description">
-                <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="35">
-                <h3>Extras</h3>
-                <p>
-                    Craving something sweet or savory? Enjoy any of our delicious burgers with our premium sides.
-                </p>
-            </div>
-            <div class="menu-items">
-                <div class="container" v-for="item in sideMenuItems">
-                    <div class="row menu-row">
-                        <h4 class="col-8 col-md-10"> {{ item.name }} </h4>
-                        <p class="col-4 col-md-2"> {{ item.price }} </p>
+                <div class="menu-items">
+                    <div class="container" v-for="item in burgerMenuItems">
+                        <div class="row menu-row">
+                            <h4 class="col-8 col-md-9">{{ item.name }}</h4>
+                            <p class="col-4 col-md-3">{{ item.price }}{{ item.priceDouble }}</p>
+                        </div>
+                        <hr class="dotted">
+                        <p>
+                            {{ item.description }}
+                        </p>
                     </div>
-                    <hr class="dotted">
-                    <p>
-                        {{ item.description }}
+                </div>
+            </div>
+
+            <!--Special Item - Flight-->
+            <div class="specialItem">
+                <div>
+                    <h3>The Bitez Flight</h3>
+                    <p class="description">
+                        Can't decide on what to try? The Bitez Flight offers four of our 
+                        favorite Bitez burgers with fries and a 
+                        drink! 
+                        <br><br>
+                        <span style="font-weight:bolder; font-family: inherit; color: var(--peachy);">Includes:</span> Original, Bacon, Classic, Mushroom<br>Plus a Large Soda & Fries
                     </p>
+                </div>
+                <!-- <div>
+                    <p class="price">$ 16</p>
+                    <ul>
+                        <li>Original</li>
+                        <li>Bacon</li>
+                        <li>Classic</li>
+                        <li>Mushroom</li>
+                        <li>Large Soda</li>
+                        <li>Fries</li>
+                    </ul>
+                </div> -->
+            </div>
+
+            <!--French Fries-->
+            <div class="extras">
+                <div class="food-description">
+                    <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="35">
+                    <h3>Extras</h3>
+                    <p>
+                        Craving something sweet or savory? Enjoy any of our delicious burgers with our premium sides.
+                    </p>
+                </div>
+                <div class="menu-items">
+                    <div class="container" v-for="item in sideMenuItems">
+                        <div class="row menu-row">
+                            <h4 class="col-8 col-md-10"> {{ item.name }} </h4>
+                            <p class="col-4 col-md-2"> {{ item.price }} </p>
+                        </div>
+                        <hr class="dotted">
+                        <p>
+                            {{ item.description }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
