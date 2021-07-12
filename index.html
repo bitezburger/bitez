@@ -1,379 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A quick and casual patty-flipping establishment based in Sierra Madre. Our mission - feeding a hungry person one mini burger at a time!">
-    <meta name="author" content="M&G Design, LLC.">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A quick and casual patty-flipping establishment based in Sierra Madre. Our mission - feeding a hungry person one mini burger at a time!"
+    />
+    <meta name="author" content="M&G Design, LLC." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Bitez | Welcome</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom styles -->
-    <link href="./static/main.css" rel="stylesheet">
+    <link href="./static/main.css" rel="stylesheet" />
 
     <!-- AOS styles -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./static/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./static/favicon/favicon-16x16.png"
+    />
+  </head>
 
-</head>
-
-<body>
-
-<div id="homeApp">
-<!-- ******************** HEADER / NAV ******************** -->
-<header id="hero">
-
-    <agile id="hero-carousel" class="carousel" :throttle-delay="0" timing="ease-in" :autoplay="true" :autoplay-speed="6000" :pause-on-hover="false" :speed="600">
-        
-        <div class="slide">
-            <img class="slide-image" src="./static/images/burger-closeup.jpg" alt="A close up shot of a Bitez burger surrounded by ingredients"/>
+  <body>
+    <div id="homeApp">
+      <!-- ******************** HEADER / NAV ******************** -->
+      <header id="hero">
+        <agile
+          id="hero-carousel"
+          class="carousel"
+          :throttle-delay="0"
+          timing="ease-in"
+          :autoplay="true"
+          :autoplay-speed="6000"
+          :pause-on-hover="false"
+          :speed="600"
+        >
+          <div class="slide">
+            <img
+              class="slide-image"
+              src="./static/images/burger-closeup.jpg"
+              alt="A close up shot of a Bitez burger surrounded by ingredients"
+            />
             <div class="d-none d-md-block hero-caption">
-                <img src="./static/images/Grab a Bitez.PNG" alt="Text display grab a bite.">
-                <img src="./static/images/Bitez.PNG" alt="Cartoon drawing of the word Bitez">
+              <img
+                src="./static/images/Grab a Bitez.PNG"
+                alt="Text display grab a bite."
+              />
+              <img
+                src="./static/images/Bitez.PNG"
+                alt="Cartoon drawing of the word Bitez"
+              />
             </div>
-        </div>
+          </div>
 
-        <div class="slide">
-            <img class="slide-image" src="./static/images/burger-lineup.jpg" alt="A line up of four types of Bitez burgers">
-        </div>
+          <div class="slide">
+            <img
+              class="slide-image"
+              src="./static/images/burger-lineup.jpg"
+              alt="A line up of four types of Bitez burgers"
+            />
+          </div>
 
-        <div class="slide">
-            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg" alt="A close up shot of a Bitez bacon burger surrounded by ingredients">
-        </div>
+          <div class="slide">
+            <img
+              loading="lazy"
+              class="slide-image"
+              src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg"
+              alt="A close up shot of a Bitez bacon burger surrounded by ingredients"
+            />
+          </div>
 
-        <div class="slide">
-            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg" alt="A close up shot of a Bitez mushroom and swiss burger">
-        </div>
+          <div class="slide">
+            <img
+              loading="lazy"
+              class="slide-image"
+              src="./static/gallery imgs/119094263_4476043585770057_3346631067249811163_n.jpg"
+              alt="A close up shot of a Bitez mushroom and swiss burger"
+            />
+          </div>
 
-        <!-- <div class="slide">
-            <img loading="lazy" class="slide-image" src="./static/gallery imgs/119091161_716773072208147_5348265976754187772_n.jpg" alt="A close up shot of a Cinnabitez">
-        </div> -->
+          <template slot="prevButton"
+            ><img
+              src="./static/images/hero-arrow-cr.png"
+              alt="Left facing button"
+          /></template>
+          <template slot="nextButton"
+            ><img
+              src="./static/images/hero-arrow-cr.png"
+              alt="Right facing button"
+          /></template>
+        </agile>
 
-        
-        <template slot="prevButton"><img src="./static/images/hero-arrow-cr.png" alt="Left facing button"></template>
-        <template slot="nextButton"><img src="./static/images/hero-arrow-cr.png" alt="Right facing button"></template>
-    </agile>
+        <a class="navbar-brand" href="index.html">
+          <img
+            id="nav-logo"
+            src="./static/images/BitezLogo.svg"
+            alt="Cartoon character eating over the word Bitez."
+          />
+        </a>
 
-    <a class="navbar-brand" href="index.html">
-        <img id="nav-logo" src="./static/images/BitezLogo.svg" alt="Cartoon character eating over the word Bitez.">
-    </a>
-
-    <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
-        <div>
+        <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
+          <div>
             <!-- Mobile Hamburger Icon -->
-            <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
-                <img src="./static/images/hamburger-menu.png" alt="Hamburger cartoon icon">
+            <div
+              @click="sideMenu = true"
+              class="hamburger-menu d-block d-lg-none"
+            >
+              <img
+                src="./static/images/hamburger-menu.png"
+                alt="Hamburger cartoon icon"
+              />
             </div>
 
-            <!-- Desktop Nav -->            
+            <!-- Desktop Nav -->
             <div class="collapse navbar-collapse" id="">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero" aria="Links to Bitez burger landing page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about" aria="Links to Bitez burger about section">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#menu" aria="Links to Bitez burger menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery" aria="Links to Bitez burger gallery section">Gallery</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#hero"
+                    aria="Links to Bitez burger landing page"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#about"
+                    aria="Links to Bitez burger about section"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#menu"
+                    aria="Links to Bitez burger menu"
+                    >Menu</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#gallery"
+                    aria="Links to Bitez burger gallery section"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
             </div>
-        </div>
-    </nav>
+          </div>
+        </nav>
 
-    <!-- MOBILE NAVIGATION BAR -->
-    <transition name="slide">
-        <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
-            <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
+        <!-- MOBILE NAVIGATION BAR -->
+        <transition name="slide">
+          <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
+            <img
+              id="exit-button"
+              @click="sideMenu=false"
+              src="https://img.icons8.com/color/48/000000/close-window.png"
+              alt="Exit navigation accordion button"
+            />
             <div class="navigation-links">
-                <a href="#hero" @click="sideMenu=false" aria="Links to Bitez burger landign page">Home</a>
-                <a href="#about" @click="sideMenu=false" aria="Links to Bitez burger about section">About</a>
-                <a href="#menu" @click="sideMenu=false" aria="Links to Bitez burger menu">Menu</a>
-                <a href="#gallery" @click="sideMenu=false" aria="links to Bitez burger gallery section">Gallery</a>   
-                <div class="navigation-social-media">
-                    <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
-                    <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
-                    <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
-                </div>
+              <a
+                href="#hero"
+                @click="sideMenu=false"
+                aria="Links to Bitez burger landign page"
+                >Home</a
+              >
+              <a
+                href="#about"
+                @click="sideMenu=false"
+                aria="Links to Bitez burger about section"
+                >About</a
+              >
+              <a
+                href="#menu"
+                @click="sideMenu=false"
+                aria="Links to Bitez burger menu"
+                >Menu</a
+              >
+              <a
+                href="#gallery"
+                @click="sideMenu=false"
+                aria="links to Bitez burger gallery section"
+                >Gallery</a
+              >
+              <div class="navigation-social-media">
+                <a
+                  href="https://www.instagram.com/bitez.burger/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Instagram"
+                  ><img src="static/images/instagram-icon.png"
+                /></a>
+                <a
+                  href="https://www.twitter.com/Bitezburger2020/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Twitter"
+                  ><img src="static/images/twitter-icon.png"
+                /></a>
+                <a
+                  href="https://www.facebook.com/Bitez-Burger-100756265056774/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Facebook"
+                  ><img src="static/images/facebook-icon.png"
+                /></a>
+              </div>
             </div>
+          </div>
+        </transition>
+      </header>
+
+      <!-- ************************ ABOUT *********************** -->
+      <section id="about">
+        <div class="aboutContent col-11 col-md-9 col-lg-7">
+          <p>
+            At Bitez, our <span class="attract">mission</span> is to provide the
+            highest level of customer service with speed and efficiency. We
+            serve quality products, prepared the same way every time, at a
+            <span class="attract">fair</span> price. We stand behind our
+            products and know they will create lifetime patrons. To support our
+            mission, we treat each team member with
+            <span class="attract">respect</span> and encouragement to nurture
+            the foundation for our success and growth.
+          </p>
         </div>
-    </transition>
-</header>
+      </section>
 
-<!-- ************************ ABOUT *********************** -->
-<section id="about">
-    <div class="aboutContent col-11 col-md-9 col-lg-7">
-        <p>
-            At Bitez, our <span class="attract">mission</span> is to provide the highest level of customer service with speed and efficiency. 
-            We serve quality products, prepared the same way every time, at a <span class="attract">fair</span> price. We stand behind our 
-            products and know they will create lifetime patrons.
+      <!-- ************************ MENU ************************ -->
+      <section id="blackboard">
+        <div
+          id="menu-style"
+          class="body-content"
+          data-aos="flip-down"
+          data-aos-offset="300"
+          data-aos-duration="600"
+        >
+          <h2 id="menu">MENU</h2>
 
-            To support our mission, we treat each team member with <span class="attract">respect</span> and encouragement to 
-            nurture the foundation for our success and growth.
-        </p>
-    </div>
-</section>
-
-<!-- ************************ MENU ************************ -->
-<section id="blackboard">
-    <div id="menu" class="body-content" data-aos="flip-down" data-aos-offset="300" data-aos-duration="600">
-        <h2>MENU</h2>
-
-        <div class="menu-container">
+          <div class="menu-container">
             <!--Hamburgers-->
             <div class="hamburgers">
-                <div class="food-description">
-                    <img src="./static/images/hamburger-icon.png" alt="hamburger cartoon icon" width="45">
-                    <h3>Burgers</h3>
-                    <p>
-                        Make it a double burger, add $1.
+              <div class="food-description">
+                <img
+                  src="./static/images/hamburger-icon.png"
+                  alt="hamburger cartoon icon"
+                  width="45"
+                />
+                <h3>Burgers</h3>
+                <p>Make it a double burger, add $1.</p>
+              </div>
+              <div class="menu-items">
+                <div class="container" v-for="item in burgerMenuItems">
+                  <div class="row menu-row">
+                    <h4 class="col-8 col-md-9">{{ item.name }}</h4>
+                    <p class="col-4 col-md-3">
+                      {{ item.price }}{{ item.priceDouble }}
                     </p>
+                  </div>
+                  <hr class="dotted" />
+                  <p>{{ item.description }}</p>
                 </div>
-                <div class="menu-items">
-                    <div class="container" v-for="item in burgerMenuItems">
-                        <div class="row menu-row">
-                            <h4 class="col-8 col-md-9">{{ item.name }}</h4>
-                            <p class="col-4 col-md-3">{{ item.price }}{{ item.priceDouble }}</p>
-                        </div>
-                        <hr class="dotted">
-                        <p>
-                            {{ item.description }}
-                        </p>
-                    </div>
-                </div>
+              </div>
             </div>
 
             <!--Special Item - Flight-->
             <div class="specialItem">
-                <div>
-                    <h3>The Bitez Flight</h3>
-                    <p class="description">
-                        Can't decide on what to try? The Bitez Flight offers four of our 
-                        favorite Bitez burgers with fries and a 
-                        drink! 
-                        <br><br>
-                        <span style="font-weight:bolder; font-family: inherit; color: var(--peachy);">Includes:</span> Original, Bacon, Classic, Mushroom<br>Plus a Large Soda & Fries
-                    </p>
-                </div>
+              <div>
+                <header>
+                  <h3>The Bitez Flight</h3>
+                  <p class="price">$16</p>
+                </header>
+                <p class="description">
+                  Can't decide on what to try? The Bitez Flight offers four of
+                  our favorite Bitez burgers with fries and a drink!
+                  <br /><br />
+                  <span
+                    style="
+                      font-weight: bolder;
+                      font-family: inherit;
+                      color: var(--peachy);
+                    "
+                    >Includes:</span
+                  >
+                  Original, Bacon, Classic, Mushroom<br />Plus a Large Soda &
+                  Fries
+                </p>
+              </div>
             </div>
 
             <!--French Fries-->
             <div class="extras">
-                <div class="food-description">
-                    <img src="./static/images/french-fries-icon.png" alt="french fry cartoon icon" width="35">
-                    <h3>Extras</h3>
-                    <p>
-                        Craving something sweet or savory?
-                    </p>
+              <div class="food-description">
+                <img
+                  src="./static/images/french-fries-icon.png"
+                  alt="french fry cartoon icon"
+                  width="35"
+                />
+                <h3>Extras</h3>
+                <p>Craving something sweet or savory?</p>
+              </div>
+              <div class="menu-items">
+                <div class="container" v-for="item in sideMenuItems">
+                  <div class="row menu-row">
+                    <h4 class="col-8 col-md-10">{{ item.name }}</h4>
+                    <p class="col-4 col-md-2">{{ item.price }}</p>
+                  </div>
+                  <hr class="dotted" />
+                  <p>{{ item.description }}</p>
                 </div>
-                <div class="menu-items">
-                    <div class="container" v-for="item in sideMenuItems">
-                        <div class="row menu-row">
-                            <h4 class="col-8 col-md-10"> {{ item.name }} </h4>
-                            <p class="col-4 col-md-2"> {{ item.price }} </p>
-                        </div>
-                        <hr class="dotted">
-                        <p>
-                            {{ item.description }}
-                        </p>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
-<!-- ********************** GALLERY *********************** -->
-<section id="gallery">
-    <div class="body-content">
+      <!-- ********************** GALLERY *********************** -->
+      <section id="gallery">
+        <div class="body-content">
+          <h2>Check Out Our Gallery</h2>
 
-        <h2>
-            Check Out Our Gallery
-        </h2>
+          <div class="gallery-container row col-md-11 m-auto">
+            <div>
+              <div
+                class="gallery-item"
+                data-aos="fade-up-right"
+                data-aos-delay="100"
+              >
+                <img
+                  src="./static/images/burger-closeup.jpg"
+                  alt="Close up picture of a burger."
+                />
+              </div>
+            </div>
+            <div>
+              <div
+                class="gallery-item"
+                data-aos="fade-up-right"
+                data-aos-delay="150"
+              >
+                <img
+                  src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg"
+                  alt="Close up picture of a Bitez bacon burger"
+                />
+              </div>
+            </div>
+            <div>
+              <div
+                class="gallery-item"
+                data-aos="fade-up-right"
+                data-aos-delay="200"
+                alt="Four burgers lined up."
+              >
+                <img src="./static/images/burger-lineup.jpg" />
+              </div>
+            </div>
+            <div>
+              <div
+                class="gallery-item"
+                data-aos="fade-up-right"
+                data-aos-delay="250"
+                alt="Close up picture of a burger."
+              >
+                <img
+                  src="./static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg"
+                />
+              </div>
+            </div>
+          </div>
 
-        <div class="gallery-container row col-md-11 m-auto">
-            <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="100">
-                    <img src="./static/images/burger-closeup.jpg" alt="Close up picture of a burger.">
-                </div>
-            </div>
-            <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="150">
-                    <img src="./static/gallery imgs/119120894_323610515640318_626623990553313876_n.jpg" alt="Close up picture of a Bitez bacon burger">
-                </div>
-            </div>
-            <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="200" alt="Four burgers lined up.">
-                    <img src="./static/images/burger-lineup.jpg">
-                </div>
-            </div>
-            <div>
-                <div class="gallery-item" data-aos="fade-up-right" data-aos-delay="250" alt="Close up picture of a burger.">
-                    <img src="./static/gallery imgs/119178867_3222644501195556_2129650795167970100_n.jpg">
-                </div>
-            </div>
+          <a
+            class="gallery-cta"
+            href="gallery.html"
+            aria="Links to the Bitez burger gallery page"
+            >See More</a
+          >
         </div>
+      </section>
 
-        <a class="gallery-cta" href="gallery.html" aria="Links to the Bitez burger gallery page">See More</a>
-        
-    </div>
-</section>
-
-
-<!-- *********************** BOOKINGS *********************** -->
-<!-- <section>
+      <!-- *********************** BOOKINGS *********************** -->
+      <!-- <section>
     <a target="_top" style=" background-color: #BF003F; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block; " href="https://square.site/book/LJ6585XEGGV3H/bitez-burger" rel="nofollow">Book an Appointment</a>
 </section> -->
 
-<!-- *********************** FOOTER *********************** -->
+      <!-- *********************** FOOTER *********************** -->
 
-<footer id="footer">
-    <div class="footer-icon" data-aos="fade-left" data-aos-offset="200">
-        <img src="./static/images/BitezTruck.png" alt="Cartoon character driving a truck.">
-    </div>
-    <div class="container" id="contact-us">
-        <div class="row footer-info">
+      <footer id="footer">
+        <div class="footer-icon" data-aos="fade-left" data-aos-offset="200">
+          <img
+            src="./static/images/BitezTruck.png"
+            alt="Cartoon character driving a truck."
+          />
+        </div>
+        <div class="container" id="contact-us">
+          <div class="row footer-info">
             <div class="col-12 col-md-6">
-                <h3>CONTACT US</h3>
-                <div class="footer-grid">
-                    <div>
-                        <img src="./static/images/email-icon.png" alt="an envelope icon" width="20">
-                    </div>
-                    <a class="text-reset" href="mailto:bitezburger@yahoo.com">bitezburger@yahoo.com</a>
+              <h3>CONTACT US</h3>
+              <div class="footer-grid">
+                <div>
+                  <img
+                    src="./static/images/email-icon.png"
+                    alt="an envelope icon"
+                    width="20"
+                  />
                 </div>
-                <div class="footer-grid">
-                    <div>
-                        <img src="./static/images/phone-icon.png" alt="a cell phone icon" width="20">
-                    </div>
-                    <a class="text-reset" href="tel:1-626-325-3952">(626) 325 - 3952</a>
+                <a class="text-reset" href="mailto:bitezburger@yahoo.com"
+                  >bitezburger@yahoo.com</a
+                >
+              </div>
+              <div class="footer-grid">
+                <div>
+                  <img
+                    src="./static/images/phone-icon.png"
+                    alt="a cell phone icon"
+                    width="20"
+                  />
                 </div>
+                <a class="text-reset" href="tel:1-626-325-3952"
+                  >(626) 325 - 3952</a
+                >
+              </div>
             </div>
             <div class="col-12 col-md-6 footer-social">
-                <h3>FOLLOW US</h3>
-                <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
-                <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
-                <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
+              <h3>FOLLOW US</h3>
+              <a
+                href="https://www.instagram.com/bitez.burger/"
+                target="_blank"
+                aria="links to Bitez Burger's Instagram"
+                ><img src="static/images/instagram-icon.png"
+              /></a>
+              <a
+                href="https://www.twitter.com/Bitezburger2020/"
+                target="_blank"
+                aria="links to Bitez Burger's Twitter"
+                ><img src="static/images/twitter-icon.png"
+              /></a>
+              <a
+                href="https://www.facebook.com/Bitez-Burger-100756265056774/"
+                target="_blank"
+                aria="links to Bitez Burger's Facebook"
+                ><img src="static/images/facebook-icon.png"
+              /></a>
             </div>
+          </div>
         </div>
+        <a
+          class="address-info"
+          href="http://maps.google.com/?q=7 Kersting Ct, Sierra Madre, 91024"
+          target="_blank"
+          aria="links to Bitez Burger's physical location"
+        >
+          7 Kersting Ct, Sierra Madre, 91024
+        </a>
+        <p class="copyright-info">
+          Copyright &copy;2021 Bitez. All rights reserved.
+        </p>
+      </footer>
     </div>
-    <a class="address-info" href="http://maps.google.com/?q=7 Kersting Ct, Sierra Madre, 91024" target="_blank" aria="links to Bitez Burger's physical location">
-        7 Kersting Ct, Sierra Madre, 91024
-    </a>
-    <p class="copyright-info">Copyright &copy;2021 Bitez. All rights reserved.</p>
-</footer>
 
+    <!-- AOS insert -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-</div>
+    <!-- Vue Insert -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://unpkg.com/vue-agile"></script>
 
-<!-- AOS insert -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<!-- Vue Insert -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="https://unpkg.com/vue-agile"></script>
-
-<script>
-    var app = new Vue({
-    el: '#homeApp',
-    components: {
-        agile: VueAgile 
-    },
-    data: {
-        locations: [
-            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},
-            {'city': 'TBA', 'when': 'TBA', 'address': 'TBA', 'hours': 'TBA', 'longitude': '0', 'latitude':'0'},
-        ],
-        burgerMenuItems: [
-            {'name': 'Original', 'price': '$2.5', 'priceDouble': '', 'description': 'Cheese, Bitez Sauce'},
-            {'name': 'Bacon', 'price': '$3.5', 'priceDouble': '', 'description': 'Cheese, Bacon, Bitez Sauce'},
-            {'name': 'Classic', 'price': '$3.5', 'priceDouble': '', 'description': 'Cheese, Lettuce, Tomato, Onion, Pickle, Bitez Sauce'},
-            {'name': 'Mushroom', 'price': '$3.5', 'priceDouble': '', 'description': 'Cheese, Mushroom, Bitez Sauce'},
-            {'name': 'Chicken', 'price': '$3.5', 'priceDouble': '', 'description': 'Cheese, Pickle, Bitez Sauce'},
-            {'name': 'Protein', 'price': '$3.5', 'priceDouble': '', 'description': 'Lettuce Wrap, Cheese, Tomato, Onion, Pickle, Mushroom, Bitez Sauce'},
-            {'name': 'Impossible', 'price': '$3.5', 'priceDouble': '', 'description': 'Vegan Meat Patty, Lettuce, Tomato, Onion, Pickle, Bitez Sauce'},
-        ],
-        sideMenuItems: [
-            {'name': 'Fries', 'price': '$3.5', 'description': 'Original Bitez Seasoning'},
-            {'name': 'Shakes', 'price': '$4.5', 'description': 'Chocolate, Stawberry, Cookies & Cream, Cookie Monster, Coffee'},
-            {'name': "Kid's Meals", 'price': '$5', 'description': 'Original Bitez Burger, Small Fries, Small SOda'},
-        ],
-        sideMenu: false,
-        timer: '',
-    },
-    methods: {
-        loadLocations: function() {
-            fetch('https://ruoyuchen.pythonanywhere.com/googlesheets', {
-                method: 'GET',
-                mode: 'cors'
+    <script>
+      var app = new Vue({
+        el: "#homeApp",
+        components: {
+          agile: VueAgile,
+        },
+        data: {
+          locations: [
+            {
+              city: "TBA",
+              when: "TBA",
+              address: "TBA",
+              hours: "TBA",
+              longitude: "0",
+              latitude: "0",
+            },
+            {
+              city: "TBA",
+              when: "TBA",
+              address: "TBA",
+              hours: "TBA",
+              longitude: "0",
+              latitude: "0",
+            },
+          ],
+          burgerMenuItems: [
+            {
+              name: "Original",
+              price: "$2.5",
+              priceDouble: "",
+              description: "Cheese, Bitez Sauce",
+            },
+            {
+              name: "Bacon",
+              price: "$3.5",
+              priceDouble: "",
+              description: "Cheese, Bacon, Bitez Sauce",
+            },
+            {
+              name: "Classic",
+              price: "$3.5",
+              priceDouble: "",
+              description:
+                "Cheese, Lettuce, Tomato, Onion, Pickle, Bitez Sauce",
+            },
+            {
+              name: "Mushroom",
+              price: "$3.5",
+              priceDouble: "",
+              description: "Cheese, Mushroom, Bitez Sauce",
+            },
+            {
+              name: "Chicken",
+              price: "$3.5",
+              priceDouble: "",
+              description: "Cheese, Pickle, Bitez Sauce",
+            },
+            {
+              name: "Protein",
+              price: "$3.5",
+              priceDouble: "",
+              description:
+                "Lettuce Wrap, Cheese, Tomato, Onion, Pickle, Mushroom, Bitez Sauce",
+            },
+            {
+              name: "Impossible",
+              price: "$3.5",
+              priceDouble: "",
+              description:
+                "Vegan Meat Patty, Lettuce, Tomato, Onion, Pickle, Bitez Sauce",
+            },
+          ],
+          sideMenuItems: [
+            {
+              name: "Fries",
+              price: "$3.5",
+              description: "Original Bitez Seasoning",
+            },
+            {
+              name: "Shakes",
+              price: "$4.5",
+              description:
+                "Chocolate, Stawberry, Cookies & Cream, Cookie Monster, Coffee",
+            },
+            {
+              name: "Kid's Meals",
+              price: "$5",
+              description: "Original Bitez Burger, Small Fries, Small SOda",
+            },
+          ],
+          sideMenu: false,
+          timer: "",
+        },
+        methods: {
+          loadLocations: function () {
+            fetch("https://ruoyuchen.pythonanywhere.com/googlesheets", {
+              method: "GET",
+              mode: "cors",
             })
-            .then(response => response.json())
-            .then((data) => {
+              .then((response) => response.json())
+              .then((data) => {
                 console.log(data);
                 this.locations = data.locations;
-            })
-        }
-    },
-    watch: {
-        sideMenu: function() {
-            if(this.sideMenu) {
-                document.documentElement.style.overflow = 'hidden';
-                return
+              });
+          },
+        },
+        watch: {
+          sideMenu: function () {
+            if (this.sideMenu) {
+              document.documentElement.style.overflow = "hidden";
+              return;
             }
-            
-            document.documentElement.style.overflow = 'auto';
-        }
-    },
-    created: function() {
-        // Create interval to update gallery images
-        // this.timer = setInterval(this.updateGallery, 7000)
-    },
-    beforeDestroy () {
-        // clearInterval(this.timer)
-    }
-    })
-</script>
 
-<!-- Vanilla -->
-<script>
+            document.documentElement.style.overflow = "auto";
+          },
+        },
+        created: function () {
+          // Create interval to update gallery images
+          // this.timer = setInterval(this.updateGallery, 7000)
+        },
+        beforeDestroy() {
+          // clearInterval(this.timer)
+        },
+      });
+    </script>
 
-    var myNav = document.getElementById('nav');
-    var logo = document.getElementById('nav-logo');
-    var heightOfNav = 75;
-    window.onscroll = function () { 
+    <!-- Vanilla -->
+    <script>
+      var myNav = document.getElementById("nav");
+      var logo = document.getElementById("nav-logo");
+      var heightOfNav = 75;
+      window.onscroll = function () {
         "use strict";
-        if (document.body.scrollTop >= heightOfNav || document.documentElement.scrollTop >= heightOfNav ) {
-            logo.classList.add('navbar-img-bg-scrolled');
-        } 
-        else {
-            logo.classList.remove('navbar-img-bg-scrolled');
+        if (
+          document.body.scrollTop >= heightOfNav ||
+          document.documentElement.scrollTop >= heightOfNav
+        ) {
+          logo.classList.add("navbar-img-bg-scrolled");
+        } else {
+          logo.classList.remove("navbar-img-bg-scrolled");
         }
 
-        if (document.body.scrollTop >= heightOfNav + 20 || document.documentElement.scrollTop >= heightOfNav + 20 ) {
-            myNav.classList.add("bg-dark");
-        } 
-        else {
-            myNav.classList.remove("bg-dark");
+        if (
+          document.body.scrollTop >= heightOfNav + 20 ||
+          document.documentElement.scrollTop >= heightOfNav + 20
+        ) {
+          myNav.classList.add("bg-dark");
+        } else {
+          myNav.classList.remove("bg-dark");
         }
-    };
-</script>
-
-</body>
-
+      };
+    </script>
+  </body>
 </html>
