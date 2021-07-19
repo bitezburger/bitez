@@ -572,7 +572,7 @@ a:link {
   text-align: center;
 }
 
-#menu-style h2 {
+#menu h2 {
   color: var(--whitemocha);
   margin-bottom: 60px;
   font-size: 4.5em;
@@ -598,7 +598,7 @@ a:link {
   font-size: 20px;
   border-style: solid;
   border-color: var(--reddish);
-  padding: 20px 40px;
+  padding: 20px 30px;
   margin-bottom: 40px;
   display: flex;
 }
@@ -672,24 +672,24 @@ a:link {
   margin-bottom: 30px;
 }
 
-#menu-style h2,
-#menu-style h3,
-#menu-style h4,
-#menu-style p {
+#menu h2,
+#menu h3,
+#menu h4,
+#menu p {
   font-family: "Shadows Into Light", cursive;
   letter-spacing: 2px;
 }
 
-#menu-style img,
-#menu-style h3 {
+#menu img,
+#menu h3 {
   display: inline;
 }
 
-#menu-style h3 {
+#menu h3 {
   font-size: 2.5em;
 }
 
-#menu-style img {
+#menu img {
   margin-right: 10px;
   padding-bottom: 15px;
 }
@@ -973,7 +973,7 @@ a:link {
     font-size: 16px;
   }
 
-  #menu-style h2 {
+  #menu h2 {
     font-size: 3em;
     margin-bottom: 25px;
   }
