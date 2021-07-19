@@ -10,7 +10,7 @@
       name="description"
       content="A quick and casual patty-flipping establishment based in Sierra Madre. Our mission - feeding a hungry person one mini burger at a time!"
     />
-    <meta name="author" content="M&G Design, LLC." />
+    <meta name="author" content="K&R Design" />
     <link
       href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
@@ -50,6 +50,16 @@
       sizes="16x16"
       href="./static/favicon/favicon-16x16.png"
     />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESXXT8LFY1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ESXXT8LFY1');
+    </script>
   </head>
 
   <body>
@@ -72,7 +82,7 @@
               src="./static/images/burger-closeup.jpg"
               alt="A close up shot of a Bitez burger surrounded by ingredients"
             />
-            <div class="d-none d-md-block hero-caption">
+            <div class="d-none d-sm-block hero-caption">
               <img
                 src="./static/images/Grab a Bitez.PNG"
                 alt="Text display grab a bite."
@@ -87,6 +97,9 @@
           <div class="slide">
             <img
               class="slide-image"
+              srcset="./static/images/burger-lineup-mobile.jpg 480w,
+              ./static/images/burger-lineup.jpg 800w"
+              sizes="(max-width: 600px) 480px, 800px"
               src="./static/images/burger-lineup.jpg"
               alt="A line up of four types of Bitez burgers"
             />
@@ -96,6 +109,9 @@
             <img
               loading="lazy"
               class="slide-image"
+              srcset="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n-mobile.jpg 480w,
+              ./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg 800w"
+              sizes="(max-width: 600px) 480px, 800px"
               src="./static/gallery imgs/119450801_808716243281423_6933465979803167294_n.jpg"
               alt="A close up shot of a Bitez bacon burger surrounded by ingredients"
             />
