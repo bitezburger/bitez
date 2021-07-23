@@ -901,6 +901,10 @@ a:link {
   color: var(--peachy) !important;
 }
 
+.contact-info:hover {
+  color: var(--peachy) !important;
+}
+
 .copyright-info {
   text-align: center;
   margin: 0;
