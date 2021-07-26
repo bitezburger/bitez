@@ -170,6 +170,12 @@ a:link {
   color: var(--peachy) !important;
 }
 
+.nav-order-now {
+  background-color: var(--reddish);
+  padding: 10px;
+  text-align: center;
+}
+
 /* Mobile Navigation List */
 .mobile-nav {
   background-color: var(--raincloud);
