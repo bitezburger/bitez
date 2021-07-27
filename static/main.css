@@ -24,6 +24,7 @@ html {
 
 body {
   background: var(--tan);
+  overflow-x: hidden;
 }
 
 /* Prevent horizontal scrolling */
@@ -150,6 +151,7 @@ a:link {
 /* Navigation List */
 .navbar {
   padding: 10px 0 !important;
+  width: 100vw;
 }
 
 .navbar-nav {
@@ -849,6 +851,7 @@ a:link {
   padding-top: 20px;
   border-radius: 25% 25% 0 0 / 10%;
   margin-top: -37px;
+  overflow-x: hidden;
 }
 
 .footer-icon {
