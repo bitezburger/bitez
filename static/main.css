@@ -291,7 +291,7 @@ a:link {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: white 2px solid;
+  box-shadow: 0 1rem 2rem hsl(357deg 49% 44%);
   padding: 5% 5%;
   font-family: "Raleway", sans-serif;
   font-size: 1.5em;
