@@ -66,75 +66,15 @@
     <div id="homeApp">
       <!-- ******************** HEADER / NAV ******************** -->
       <header id="hero">
-        <agile
-          id="hero-carousel"
-          class="carousel"
-          :throttle-delay="0"
-          timing="ease-in"
-          :autoplay="true"
-          :autoplay-speed="6000"
-          :pause-on-hover="false"
-          :speed="600"
-        >
-          <div class="first-slide slide">
-            <img
-              class="slide-image"
-              src="./static/images/burger-closeup.jpg"
-              alt="A close up shot of a Bitez burger surrounded by ingredients"
-            />
-            <div class="d-none d-sm-block hero-caption">
-              <img
-                src="./static/images/Grab a Bitez.PNG"
-                alt="Text display grab a bite."
-              />
-              <img
-                src="./static/images/Bitez.PNG"
-                alt="Cartoon drawing of the word Bitez"
-              />
-            </div>
-          </div>
-
-          <!-- To Replace -->
-          <!-- <div class="slide">
-            <img
-              class="slide-image"
-              srcset="./static/images/burger-lineup-mobile.jpg 480w,
-              ./static/images/burger-lineup.jpg 800w"
-              sizes="(max-width: 600px) 480px, 800px"
-              src="./static/images/burger-lineup.jpg"
-              alt="A line up of four types of Bitez burgers"
-            />
-          </div> -->
-
-          <div class="slide">
-            <img
-              loading="lazy"
-              class="slide-image"
-              src="./static/gallery imgs/mushroom-burger.jpg"
-              alt="A close up shot of a Bitez mushroom and swiss burger"
-            />
-          </div>
-
-          <div class="slide">
-            <img
-              loading="lazy"
-              class="slide-image"
-              src="./static/gallery imgs/cinnabitez.jpg"
-              alt="A close up shot of a Bitez bacon burger surrounded by ingredients"
-            />
-          </div>
-
-          <template slot="prevButton"
-            ><img
-              src="./static/images/hero-arrow-cr.png"
-              alt="Left facing button"
-          /></template>
-          <template slot="nextButton"
-            ><img
-              src="./static/images/hero-arrow-cr.png"
-              alt="Right facing button"
-          /></template>
-        </agile>
+        <img
+          class="hero-image"
+          src="./static/gallery imgs/lettuce-bg-triplet.jpg"
+          alt="A close up shot of a Bitez burger surrounded by ingredients"
+        />
+        <div class="d-none d-sm-block hero-caption">
+          <img src="./static/images/Grab a Bitez.PNG" alt="Text display grab a bite.">
+          <img src="./static/images/Bitez.PNG" alt="Cartoon drawing of the word Bitez">
+        </div>
 
         <a class="navbar-brand" href="index.html">
           <img
@@ -305,9 +245,6 @@
                 <div class="container" v-for="item in burgerMenuItems">
                   <div class="row menu-row">
                     <h4 class="col-8 col-md-9">{{ item.name }}</h4>
-                    <p class="col-4 col-md-3">
-                      {{ item.price }}{{ item.priceDouble }}
-                    </p>
                   </div>
                   <hr class="dotted" />
                   <p>{{ item.description }}</p>
@@ -320,7 +257,7 @@
               <div>
                 <header>
                   <h3>The Bitez Flight</h3>
-                  <p class="price">$16</p>
+                  <p class="price"></p>
                 </header>
                 <p class="description">
                   Can't decide on what to try? The Bitez Flight offers four of
@@ -355,7 +292,6 @@
                 <div class="container" v-for="item in sideMenuItems">
                   <div class="row menu-row">
                     <h4 class="col-8 col-md-10">{{ item.name }}</h4>
-                    <p class="col-4 col-md-2">{{ item.price }}</p>
                   </div>
                   <hr class="dotted" />
                   <p>{{ item.description }}</p>
@@ -363,11 +299,6 @@
 
                 <div class="row menu-row">
                   <h4 class="col-2 col-md-2">Sodas</h4>
-                  <p class="col-10 col-md-10" style="letter-spacing:0; align-self: center; margin: 0;">
-                    S: $1.5 
-                    M: $2.5 
-                    L: $3.5
-                  </p>
                 </div>
                 <hr class="dotted" />
                 <div>
@@ -394,7 +325,7 @@
                 data-aos-delay="100"
               >
                 <img
-                  src="./static/images/burger-closeup.jpg"
+                  src="./static/gallery imgs/lettuce-bg-wrap.jpg"
                   alt="Close up picture of a burger."
                 />
               </div>
@@ -406,7 +337,7 @@
                 data-aos-delay="150"
               >
                 <img
-                  src="./static/gallery imgs/mushroom-burger.jpg"
+                  src="./static/gallery imgs/lettuce-bg-flight.jpg"
                   alt="Close up picture of a Bitez mushroom burger"
                 />
               </div>
@@ -533,13 +464,11 @@
     <!-- Vue Insert -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <script src="https://unpkg.com/vue-agile@1.0.5"></script>
 
     <script>
       var app = new Vue({
         el: "#homeApp",
         components: {
-          agile: VueAgile,
         },
         data: {
           locations: [

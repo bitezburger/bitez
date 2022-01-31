@@ -1,242 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Food truck delivery service for incredible burgers, and even better experiences.">
-    <meta name="author" content="M&G Design, LLC.">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Food truck delivery service for incredible burgers, and even better experiences."
+    />
+    <meta name="author" content="M&G Design, LLC." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Raleway:wght@400;600&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Bitez | Gallery</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
     <!-- Custom styles -->
-    <link href="./static/gallery.css" rel="stylesheet">
+    <link href="./static/gallery.css" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon/apple-touch-icon.png">   
-    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./static/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./static/favicon/favicon-16x16.png"
+    />
+  </head>
 
-</head>
+  <body>
+    <div id="galleryApp">
+      <!-- ******************** HEADER / NAV ******************** -->
+      <header id="banner">
+        <img
+          id="banner-image"
+          src="./static/gallery imgs/gallery-banner.jpg"
+          alt="line up of four types of burgers"
+        />
 
-<body>
-
-<div id="galleryApp">
-<!-- ******************** HEADER / NAV ******************** -->
-<header id="banner">
-
-    <img id="banner-image" src="./static/gallery imgs/mushroom-burger.jpg" alt="line up of four types of burgers">
-
-    <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
-        <div>
+        <nav class="navbar fixed-top navbar-expand-lg fixed-top" id="nav">
+          <div>
             <!-- Mobile Hamburger Icon -->
-            <div @click="sideMenu = true" class="hamburger-menu d-block d-lg-none">
-                <img src="./static/images/hamburger-menu.png" alt="hamburger cartoon icon">
+            <div
+              @click="sideMenu = true"
+              class="hamburger-menu d-block d-lg-none"
+            >
+              <img
+                src="./static/images/hamburger-menu.png"
+                alt="hamburger cartoon icon"
+              />
             </div>
             <div class="collapse navbar-collapse" id="">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li>
-                    <div class="nav-item">
-                        <a  class="nav-link" href="index.html#menu">Menu</a>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </nav>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
 
-    <!-- MOBILE NAVIGATION BAR -->
-    <transition name="slide">
-        <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
-            <img id="exit-button" @click="sideMenu=false" src="https://img.icons8.com/color/48/000000/close-window.png" alt="Exit navigation accordion button">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <div class="nav-item">
+                  <a class="nav-link" href="index.html#menu">Menu</a>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- MOBILE NAVIGATION BAR -->
+        <transition name="slide">
+          <div class="mobile-nav" v-if="sideMenu==true" v-cloak>
+            <img
+              id="exit-button"
+              @click="sideMenu=false"
+              src="https://img.icons8.com/color/48/000000/close-window.png"
+              alt="Exit navigation accordion button"
+            />
             <div class="navigation-links">
-                <a href="index.html" @click="sideMenu=false">Home</a>
-                <a href="#" @click="sideMenu=false">Gallery</a>  
-                <a href="index.html#menu" @click="sideMenu=false">Menu</a>
-                <div class="navigation-social-media">
-                    <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
-                    <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
-                    <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
-                </div>
+              <a href="index.html" @click="sideMenu=false">Home</a>
+              <a href="#" @click="sideMenu=false">Gallery</a>
+              <a href="index.html#menu" @click="sideMenu=false">Menu</a>
+              <div class="navigation-social-media">
+                <a
+                  href="https://www.instagram.com/bitez.burger/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Instagram"
+                  ><img src="static/images/instagram-icon.png"
+                /></a>
+                <a
+                  href="https://www.twitter.com/Bitezburger2020/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Twitter"
+                  ><img src="static/images/twitter-icon.png"
+                /></a>
+                <a
+                  href="https://www.facebook.com/Bitez-Burger-100756265056774/"
+                  target="_blank"
+                  aria="links to Bitez Burger's Facebook"
+                  ><img src="static/images/facebook-icon.png"
+                /></a>
+              </div>
             </div>
-        </div>
-    </transition>
-</header>
+          </div>
+        </transition>
+      </header>
 
-<!-- *********************** CONTENT *********************** -->
+      <!-- *********************** CONTENT *********************** -->
 
-<section class="col-sm-12 col-md-11 m-auto">
-
-    <transition name="fade" v-if="showGalleryModal" v-cloak>
-        <div id="gallery-wrapper">
-
+      <section class="col-sm-12 col-md-11 m-auto">
+        <transition name="fade" v-if="showGalleryModal" v-cloak>
+          <div id="gallery-wrapper">
             <div @click="hideGalleryModal" id="gallery-backdrop"></div>
-            <button aria-label="close modal" type="button" class="gallery-close" @click="hideGalleryModal"></button>
+            <button
+              aria-label="close modal"
+              type="button"
+              class="gallery-close"
+              @click="hideGalleryModal"
+            ></button>
 
-            <vue-litebox id="gallery-modal" :items="images" :start-at="galleryStartIndex">
+            <vue-litebox
+              id="gallery-modal"
+              :items="images"
+              :start-at="galleryStartIndex"
+            >
+              <button
+                aria-label="hidden button"
+                type="button"
+                slot="close"
+                style="display: none"
+              ></button>
 
-                <button aria-label="hidden button" type="button" slot="close" style="display:none;"></button>
+              <button
+                aria-label="previous image button"
+                id="prevButton"
+                type="button"
+                slot="prev"
+                aria-label="Previous item"
+                slot-scope="{ prevProps, prevEvents }"
+                v-bind="prevProps"
+                v-on="prevEvents"
+              >
+                <img src="./static/images/hero-arrow-cr.png" />
+              </button>
+              <button
+                aria-label="next image button"
+                id="nextButton"
+                type="button"
+                slot="next"
+                aria-label="Next item"
+                slot-scope="{ nextProps, nextEvents }"
+                v-bind="nextProps"
+                v-on="nextEvents"
+              >
+                <img src="./static/images/hero-arrow-cr.png" />
+              </button>
 
-                <button aria-label="previous image button" id="prevButton" type="button" slot="prev" aria-label="Previous item" slot-scope="{ prevProps, prevEvents }" v-bind="prevProps" v-on="prevEvents"><img src="./static/images/hero-arrow-cr.png"></button>
-                <button aria-label="next image button" id="nextButton" type="button" slot="next" aria-label="Next item" slot-scope="{ nextProps, nextEvents }" v-bind="nextProps" v-on="nextEvents"><img src="./static/images/hero-arrow-cr.png"></button>
-
-                <figcaption slot="caption" slot-scope="{ captionProps, currentItem, currentItemIndex, totalItems }" 
-                    v-bind="captionProps">
-                    <div class="vlb-caption-title" v-if="currentItem.title">{{currentItem.title}}</div>
-                    <div class="vlb-caption-count">{{currentItemIndex + 1}}/{{totalItems}}</div>
-                </figcaption>
-                
-            </vue-litebox>
-        </div>
-    </transition>
-
-    <main id="gallery-grid">
-        <div v-for="(item, index) in images" :key="index" class="gallery-item" @click="galleryStartIndex=index; showGalleryModal=true">
-            <img class="js-lazy-image" :src="item.src" :alt="item.title" loading="lazy">
-        </div>
-    </main>
-
-</section>
-
-<!-- *********************** FOOTER *********************** -->
-
-<footer id="footer">
-    <div class="footer-icon">
-        <img src="./static/images/BitezTruck.png">
-    </div>
-    <div class="container">
-        <div class="row footer-info">
-            <div class="col-12 col-md-6">
-                <h3>CONTACT US</h3>
-                <div class="footer-phone">
-                    <div>
-                        <img src="./static/images/email-icon.png" alt="an envelope icon" width="20">
-                    </div>
-                    <a class="text-reset" href="mailto:bitezburger@yahoo.com">bitezburger@yahoo.com</a>
+              <figcaption
+                slot="caption"
+                slot-scope="{ captionProps, currentItem, currentItemIndex, totalItems }"
+                v-bind="captionProps"
+              >
+                <div class="vlb-caption-title" v-if="currentItem.title">
+                  {{currentItem.title}}
                 </div>
+                <div class="vlb-caption-count">
+                  {{currentItemIndex + 1}}/{{totalItems}}
+                </div>
+              </figcaption>
+            </vue-litebox>
+          </div>
+        </transition>
+
+        <main id="gallery-grid">
+          <div
+            v-for="(item, index) in images"
+            :key="index"
+            class="gallery-item"
+            @click="galleryStartIndex=index; showGalleryModal=true"
+          >
+            <img
+              class="js-lazy-image"
+              :src="item.src"
+              :alt="item.title"
+              loading="lazy"
+            />
+          </div>
+        </main>
+      </section>
+
+      <!-- *********************** FOOTER *********************** -->
+
+      <footer id="footer">
+        <div class="footer-icon">
+          <img src="./static/images/BitezTruck.png" />
+        </div>
+        <div class="container">
+          <div class="row footer-info">
+            <div class="col-12 col-md-6">
+              <h3>CONTACT US</h3>
+              <div class="footer-phone">
+                <div>
+                  <img
+                    src="./static/images/email-icon.png"
+                    alt="an envelope icon"
+                    width="20"
+                  />
+                </div>
+                <a class="text-reset" href="mailto:bitezburger@yahoo.com"
+                  >bitezburger@yahoo.com</a
+                >
+              </div>
             </div>
             <div class="col-12 col-md-6 footer-social">
-                <h3>FOLLOW US</h3>
-                <a href="https://www.instagram.com/bitez.burger/" target="_blank" aria="links to Bitez Burger's Instagram"><img src="static/images/instagram-icon.png"></a>
-                <a href="https://www.twitter.com/Bitezburger2020/" target="_blank" aria="links to Bitez Burger's Twitter"><img src="static/images/twitter-icon.png"></a>
-                <a href="https://www.facebook.com/Bitez-Burger-100756265056774/" target="_blank" aria="links to Bitez Burger's Facebook"><img src="static/images/facebook-icon.png"></a>
+              <h3>FOLLOW US</h3>
+              <a
+                href="https://www.instagram.com/bitez.burger/"
+                target="_blank"
+                aria="links to Bitez Burger's Instagram"
+                ><img src="static/images/instagram-icon.png"
+              /></a>
+              <a
+                href="https://www.twitter.com/Bitezburger2020/"
+                target="_blank"
+                aria="links to Bitez Burger's Twitter"
+                ><img src="static/images/twitter-icon.png"
+              /></a>
+              <a
+                href="https://www.facebook.com/Bitez-Burger-100756265056774/"
+                target="_blank"
+                aria="links to Bitez Burger's Facebook"
+                ><img src="static/images/facebook-icon.png"
+              /></a>
             </div>
+          </div>
         </div>
+        <p class="copyright-info">
+          Copyright &copy;2020 Bitez. All rights reserved.
+        </p>
+      </footer>
     </div>
-    <p class="copyright-info">Copyright &copy;2020 Bitez. All rights reserved.</p>
-</footer>
 
+    <!-- Vue Insert -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 
-</div>
+    <!-- Lightbox Component -->
+    <script src="https://unpkg.com/vue-litebox"></script>
 
-<!-- Vue Insert -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-
-<!-- Lightbox Component -->
-<script src="https://unpkg.com/vue-litebox"></script>
-
-<script>
-    var app = new Vue({
-    el: '#galleryApp',
-    components: { 
-        VueLightbox: VueLitebox,
-    },
-    data: {
-        sideMenu: false,
-        galleryStartIndex: 0,
-        showGalleryModal: false,
-        images: [
-            {src : './static/gallery imgs/mushroom-burger.jpg', title : "Mushroom Swiss. Mmmm.", alt : 'Close up of burger with mushrooms and swiss cheese.'},
-            {src : './static/gallery imgs/mushroom-burger-with-ingredients.jpg' ,title : "Up close and personal.", alt : 'Close up of burger with ingredients in the background.'},
-            {src : './static/gallery imgs/cinnabitez.jpg' ,title : "", alt : 'Single Cinnabitez covered in frosting featured on a black plate'},
-            {src : './static/gallery imgs/fries-close-up.jpg' ,title : "", alt : 'Bitez fries.'},
-            {src : './static/gallery imgs/burger-flight-with-drink.jpg' ,title : "", alt : 'Bitez flight of burgers featured with a drink.'},
-            {src : './static/gallery imgs/bitez-chicken-sandwich.jpg' ,title : "", alt : 'Bitez chicken sandwich.'},
-            {src : './static/gallery imgs/bitez-hawaiian-loco-moco.jpg' ,title : "", alt : 'Bitez Hawaiian loco moco burger.'},
-            {src : './static/gallery imgs/bitez-mac-and-cheese.jpg' ,title : "", alt : 'Bitez mac and cheese burger.'},
-            {src : './static/gallery imgs/burger-flight.jpg' ,title : "", alt : 'Bitez flight featured.'},
-        ]
-    },
-    methods: {
-        hideGalleryModal() {
+    <script>
+      var app = new Vue({
+        el: "#galleryApp",
+        components: {
+          VueLightbox: VueLitebox,
+        },
+        data: {
+          sideMenu: false,
+          galleryStartIndex: 0,
+          showGalleryModal: false,
+          images: [
+            {
+              src: "./static/gallery imgs/lettuce-bg-flight.jpg",
+              title: "Flight of burgers! Mmmm.",
+              alt: "Four delicious burgers placed right next to each other.",
+            },
+            {
+              src: "./static/gallery imgs/lettuce-bg-wrap.jpg",
+              title: "I'm on a diet...",
+              alt: "Close up of burger with ingredients in the background.",
+            },
+            {
+              src: "./static/gallery imgs/lettuce-bg-bacon.jpg",
+              title: "Bacon please!",
+              alt: "Burger with bacon.",
+            },
+            {
+              src: "./static/gallery imgs/lettuce-bg-original.jpg",
+              title: "It all started with the original...",
+              alt: "Picture of the Bitez original burger.",
+            },
+            {
+              src: "./static/gallery imgs/buffalo-ranch.jpg",
+              title: "Would you like a burger with that sauce?",
+              alt: "Picture of a burger with ranch sauce.",
+            },
+            {
+              src: "./static/gallery imgs/fountain-drinks.jpg",
+              title: "Don't worry, we have drinks to go with that flight.",
+              alt: "Picture of fountain drinks.",
+            },
+            {
+              src: "./static/gallery imgs/cinnabitez.jpg",
+              title: "",
+              alt: "Single Cinnabitez covered in frosting featured on a black plate",
+            },
+            {
+              src: "./static/gallery imgs/fries-close-up.jpg",
+              title: "",
+              alt: "Bitez fries.",
+            },
+            {
+              src: "./static/gallery imgs/burger-flight-with-drink.jpg",
+              title: "",
+              alt: "Bitez flight of burgers featured with a drink.",
+            },
+            {
+              src: "./static/gallery imgs/bitez-chicken-sandwich.jpg",
+              title: "",
+              alt: "Bitez chicken sandwich.",
+            },
+            {
+              src: "./static/gallery imgs/bitez-hawaiian-loco-moco.jpg",
+              title: "",
+              alt: "Bitez Hawaiian loco moco burger.",
+            },
+            {
+              src: "./static/gallery imgs/bitez-mac-and-cheese.jpg",
+              title: "",
+              alt: "Bitez mac and cheese burger.",
+            },
+            {
+              src: "./static/gallery imgs/burger-flight.jpg",
+              title: "",
+              alt: "Bitez flight featured.",
+            },
+          ],
+        },
+        methods: {
+          hideGalleryModal() {
             this.showGalleryModal = false;
-        }
-    },
-    watch: {
-        showGalleryModal: function() {
-            if(this.showGalleryModal) {
-                document.documentElement.style.overflow = 'hidden';
-                return
+          },
+        },
+        watch: {
+          showGalleryModal: function () {
+            if (this.showGalleryModal) {
+              document.documentElement.style.overflow = "hidden";
+              return;
             }
-            
-            document.documentElement.style.overflow = 'auto';
-        }
-    },
-    })
-</script>
 
-<!-- Vanilla -->
-<script>
-    var myNav = document.getElementById('nav');
-    var heightOfNav = 75;
-    // Get all of the images that are marked up to lazy load
-    const images = document.querySelectorAll('.js-lazy-image');
-    const config = {
+            document.documentElement.style.overflow = "auto";
+          },
+        },
+      });
+    </script>
+
+    <!-- Vanilla -->
+    <script>
+      var myNav = document.getElementById("nav");
+      var heightOfNav = 75;
+      // Get all of the images that are marked up to lazy load
+      const images = document.querySelectorAll(".js-lazy-image");
+      const config = {
         // If the image gets within 50px in the Y axis, start the download.
-        rootMargin: '150px 0px',
-        threshold: 0.01
-    };
+        rootMargin: "150px 0px",
+        threshold: 0.01,
+      };
 
-    function onIntersection(entries) {
+      function onIntersection(entries) {
         // Loop through the entries
-        entries.forEach(entry => {
-        // Are we in viewport?
-        if (entry.intersectionRatio > 0) {
+        entries.forEach((entry) => {
+          // Are we in viewport?
+          if (entry.intersectionRatio > 0) {
+            // Stop watching and load the image
+            observer.unobserve(entry.target);
+            preloadImage(entry.target);
+          }
+        });
+      }
 
-        // Stop watching and load the image
-        observer.unobserve(entry.target);
-        preloadImage(entry.target);
-        }
-    });
-    }
-
-
-    window.onscroll = function () { 
+      window.onscroll = function () {
         "use strict";
 
-        if (document.body.scrollTop >= heightOfNav + 20 || document.documentElement.scrollTop >= heightOfNav + 20 ) {
-            myNav.classList.add("bg-dark");
-        } 
-        else {
-            myNav.classList.remove("bg-dark");
+        if (
+          document.body.scrollTop >= heightOfNav + 20 ||
+          document.documentElement.scrollTop >= heightOfNav + 20
+        ) {
+          myNav.classList.add("bg-dark");
+        } else {
+          myNav.classList.remove("bg-dark");
         }
-    };
+      };
 
-
-    // If we don't have support for intersection observer, load the images immediately
-    if (!('IntersectionObserver' in window)) {
-        Array.from(images).forEach(image => preloadImage(image));
-    } else {
+      // If we don't have support for intersection observer, load the images immediately
+      if (!("IntersectionObserver" in window)) {
+        Array.from(images).forEach((image) => preloadImage(image));
+      } else {
         // It is supported, load the images
         observer = new IntersectionObserver(onIntersection, config);
-        images.forEach(image => {
-        
-        observer.observe(image);
-    });
-    }
-</script>
-
-</body>
-
+        images.forEach((image) => {
+          observer.observe(image);
+        });
+      }
+    </script>
+  </body>
 </html>
