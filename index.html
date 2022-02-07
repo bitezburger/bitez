@@ -8,7 +8,7 @@
     />
     <meta
       name="description"
-      content="A quick and casual patty-flipping establishment based in Sierra Madre. Our mission - feeding a hungry person one mini burger at a time!"
+      content="A quick and casual establishment that serves the best sliders in Sierra Madre!"
     />
     <meta name="author" content="K&R Design" />
     <link
@@ -204,7 +204,10 @@
 
       <!-- ************************ ABOUT *********************** -->
       <section id="about">
+
         <div class="aboutContent col-11 col-md-9 col-lg-7">
+          <blockquote>The best sliders in Sierra Madre</blockquote>
+          <br>
           <p>
             At Bitez, our <span class="attract">mission</span> is to provide the
             highest level of customer service with speed and efficiency. We
@@ -453,6 +456,13 @@
           Copyright &copy;2022 Bitez. All rights reserved.
         </p>
       </footer>
+
+      <button id="orderButton" class="order-button">
+        <a class="nav-link"
+                    href="https://www.clover.com/online-ordering/bitez-sierra-madre"
+                    aria="Links to Clover.com to order from Bitez online"
+                    target="_blank">Order Now!</a>
+                  </button>
     </div>
 
     <!-- AOS insert -->
@@ -595,8 +605,12 @@
       var myNav = document.getElementById("nav");
       var logo = document.getElementById("nav-logo");
       var heightOfNav = 75;
+      var minScrollForOrderButton = 200;
+      var orderButton = document.getElementById("orderButton");
+
       window.onscroll = function () {
         "use strict";
+        // Navbar logo size
         if (
           document.body.scrollTop >= heightOfNav ||
           document.documentElement.scrollTop >= heightOfNav
@@ -606,6 +620,7 @@
           logo.classList.remove("navbar-img-bg-scrolled");
         }
 
+        // Navbar bg color
         if (
           document.body.scrollTop >= heightOfNav + 20 ||
           document.documentElement.scrollTop >= heightOfNav + 20
@@ -613,6 +628,13 @@
           myNav.classList.add("bg-dark");
         } else {
           myNav.classList.remove("bg-dark");
+        }
+
+        // Online order button
+        if (document.body.scrollTop > minScrollForOrderButton || document.documentElement.scrollTop > minScrollForOrderButton) {
+          orderButton.style.transform = "scale(1)";
+        } else {
+          orderButton.style.transform = "scale(0)";
         }
       };
     </script>

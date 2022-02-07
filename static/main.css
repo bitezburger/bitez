@@ -103,6 +103,20 @@ a:link {
   padding: 15px 33px 15px 33px;
 }
 
+.order-button {
+  background-color: var(--reddish);
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bolder;
+  position: fixed;
+  bottom: 50px;
+  left: 80px;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
 /* Nav Bar
 ------------------------------------*/
 /* Navigation */
@@ -299,6 +313,25 @@ a:link {
   line-height: 1.9em;
   background: #cf3a42;
   border-radius: 10px;
+}
+
+#about blockquote {
+  font-size: 1.5em;
+}
+
+#about blockquote:before,
+#about blockquote:after {
+  color: white;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin: 0 0.15em;
+  vertical-align: -0.3em;
+}
+#about blockquote:before {
+  content: open-quote;
+}
+#about blockquote:after {
+  content: close-quote;
 }
 
 .attract {
@@ -855,5 +888,9 @@ a:link {
   .address-info,
   .copyright-info {
     font-size: 12px;
+  }
+  .order-button {
+    bottom: 100px;
+    left: 35px;
   }
 }
